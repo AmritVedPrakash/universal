@@ -1,10 +1,12 @@
 import React from 'react'
 import ServicesSection from '../components/ServicesSection'
+import SecurityServices from '../components/services/SecurityServices'
 
 export default function Services() {
   return (
     <div>
-<ServicesSection/>
+      <SecurityServices/>
+{/* <ServicesSection/> */}
     </div>
     
         

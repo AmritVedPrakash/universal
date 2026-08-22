@@ -2,130 +2,185 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   ShieldCheck,
-  Target,
-  Eye,
-  Users,
   Award,
+  Users,
+  Globe2,
+  BadgeCheck,
+  Target,
   CheckCircle2,
+  BriefcaseBusiness,
 } from "lucide-react";
 
-
-
-// Apne aboutus folder ki actual image ka naam yahan lagao
 import aboutImage from "../assets/aboutus/aboutus.jpg";
 
 export default function AboutUs() {
-  const services = [
+  const highlights = [
     {
-      icon: <ShieldCheck size={28} />,
-      title: "Professional Security",
-      text: "Highly trained and verified security guards providing dependable protection for businesses, institutions, residential spaces and commercial premises.",
+      icon: <Award size={28} />,
+      number: "25+",
+      title: "Years of Experience",
+      text: "Our Founder Chairman, Mr. Sudhir Singh, brings over 25 years of experience in security and allied services.",
     },
     {
       icon: <Users size={28} />,
-      title: "Trained Security Workforce",
-      text: "Our security personnel are carefully selected, trained and prepared to handle different security situations with discipline and professionalism.",
+      number: "2500+",
+      title: "Security Personnel",
+      text: "A strong workforce of over 2500 Security and FMS personnel.",
     },
     {
-      icon: <Award size={28} />,
-      title: "19+ Years Experience",
-      text: "Since 2005, Red Scorpion Security Solutions has been providing professional security solutions to organizations and individuals.",
+      icon: <BadgeCheck size={28} />,
+      number: "PSARA",
+      title: "Certified",
+      text: "PSARA certified organization with a commitment to professional security standards.",
     },
+    {
+      icon: <Globe2 size={28} />,
+      number: "Pan India",
+      title: "Service Presence",
+      text: "Providing security, facility management and allied services across India.",
+    },
+  ];
+
+  const managementPoints = [
+    "Veterans of Military",
+    "Central Police Organisations",
+    "Para Military Forces",
+    "Seasoned Security Professionals",
+    "Facility Management Professionals",
   ];
 
   return (
     <>
-      {/* ================= HERO ================= */}
-      <section className="relative overflow-hidden bg-[#f8f8f8] px-5 pb-16 pt-32 sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-[1350px]">
+      {/* =====================================================
+          HERO
+      ====================================================== */}
+      <section className="relative overflow-hidden bg-[#f7f7f5] px-5 pb-16 pt-32 sm:px-8 lg:px-12">
+        {/* Decorative background */}
+        <div className="absolute right-0 top-0 h-72 w-72 rounded-full bg-[#d83b32]/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-[#d83b32]/5 blur-3xl" />
+
+        <div className="relative mx-auto max-w-[1350px]">
           <motion.div
             initial={{ opacity: 0, y: 35 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-sm font-bold uppercase tracking-[0.22em] text-[#d83b32]">
-              About Us
-            </p>
+            <div className="flex items-center gap-4">
+              <span className="h-[2px] w-12 bg-[#d83b32]" />
 
-            <h1 className="mt-3 max-w-[800px] text-4xl font-bold leading-tight text-[#24272d] sm:text-5xl md:text-6xl">
-              An Honest Service.
-              <br />
-              <span className="text-[#d83b32]">Round the Clock.</span>
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#d83b32]">
+                About Us
+              </p>
+            </div>
+
+            <h1 className="mt-5 max-w-4xl text-4xl font-extrabold leading-tight text-[#25282d] sm:text-5xl lg:text-6xl">
+              Security Built on
+              <span className="text-[#d83b32]"> Experience</span>
+              <br />& Professional Excellence.
             </h1>
 
-            <div className="mt-6 h-1 w-20 rounded-full bg-[#d83b32]" />
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-gray-600">
+              UNIVERSAL is committed to providing security, facility management
+              and allied services in line with international standards while
+              delivering innovative solutions tailored to client requirements.
+            </p>
+
+            <div className="mt-7 flex flex-wrap gap-3">
+              <span className="rounded-full bg-[#d83b32] px-5 py-2 text-sm font-semibold text-white">
+                PSARA Certified
+              </span>
+
+              <span className="rounded-full border border-gray-300 bg-white px-5 py-2 text-sm font-semibold text-gray-700">
+                2500+ Workforce
+              </span>
+
+              <span className="rounded-full border border-gray-300 bg-white px-5 py-2 text-sm font-semibold text-gray-700">
+                Security & FMS
+              </span>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* ================= MAIN INTRO ================= */}
+      {/* =====================================================
+          MAIN ABOUT CONTENT
+      ====================================================== */}
       <section className="bg-white px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
-        <div className="mx-auto grid max-w-[1350px] items-start gap-14 lg:grid-cols-[1.05fr_0.95fr]">
-          {/* LEFT CONTENT */}
+        <div className="mx-auto grid max-w-[1350px] items-center gap-14 lg:grid-cols-[1fr_0.9fr]">
+          {/* CONTENT */}
           <motion.div
             initial={{ opacity: 0, x: -60 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="rounded-2xl border border-gray-200 bg-white p-7 shadow-[0_10px_40px_rgba(0,0,0,0.05)] sm:p-10">
-              <p className="text-lg leading-9 text-gray-700">
-                All round the clock, 365 days of the year, Red Scorpion Security
-                Solutions boasts of its commitment to provide dependable and
-                honest security services to its customers.
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d83b32]">
+              Who We Are
+            </p>
+
+            <h2 className="mt-3 text-3xl font-extrabold leading-tight text-[#25282d] sm:text-4xl">
+              A Vision Driven by
+              <span className="text-[#d83b32]"> Leadership</span>
+            </h2>
+
+            <div className="mt-6 space-y-5 text-[17px] leading-8 text-gray-600">
+              <p>
+                A vision of our Founder Chairman,
+                <strong className="text-gray-900"> Mr. Sudhir Singh</strong>,
+                who has additional expertise in Manned Guarding, FMS & Allied
+                Services.
               </p>
 
-              <p className="mt-5 text-lg leading-9 text-gray-700">
-                Red Scorpion Security Solutions comprises an extremely dedicated
-                team of security professionals and well-trained guards. Our
-                workforce is committed to maintaining safety, discipline and
-                security across every assignment.
+              <p>
+                He has demonstrated success in delivering results, optimizing
+                business efficiency, business development & marketing. He drives
+                operations & organization development at Regional and All India
+                level.
               </p>
 
-              <p className="mt-5 text-lg leading-9 text-gray-700">
-                With the changing business environment and increasing security
-                requirements, we provide a comprehensive range of solutions
-                designed to meet the diverse needs of our clients.
-              </p>
-
-              <p className="mt-5 text-lg leading-9 text-gray-700">
-                We are a reputed security solutions agency offering highly
-                trained security guard services for businesses, educational
-                institutions, commercial establishments, residential spaces and
-                other organizations.
+              <p>
+                He has
+                <strong className="text-gray-900">
+                  {" "}
+                  25 years of experience
+                </strong>
+                in top-level Management Positions with leading Security & Allied
+                Services Companies, operating in India & Overseas, since 1995.
               </p>
             </div>
 
-            {/* SINCE 2005 CARD */}
+            {/* Founder Card */}
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: 0.2 }}
-              className="mt-8 grid gap-6 sm:grid-cols-[0.8fr_1.2fr]"
+              transition={{ duration: 0.6 }}
+              className="mt-8 rounded-2xl border-l-4 border-[#d83b32] bg-[#fff7f6] p-6"
             >
-              <div className="overflow-hidden rounded-2xl">
-                <img
-                  src={aboutImage}
-                  alt="Red Scorpion Security Solutions"
-                  className="h-full min-h-[230px] w-full object-cover transition duration-700 hover:scale-105"
-                />
-              </div>
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#d83b32] text-white">
+                  <BriefcaseBusiness size={24} />
+                </div>
 
-              <div className="rounded-2xl border border-[#d83b32]/20 bg-[#fff7f6] p-7">
-                <p className="text-xl font-bold text-[#d83b32]">Since 2005</p>
+                <div>
+                  <p className="text-sm font-semibold uppercase tracking-wider text-[#d83b32]">
+                    Founder Chairman
+                  </p>
 
-                <p className="mt-4 text-base leading-8 text-gray-700">
-                  Red Scorpion Security Solutions has been offering a diverse
-                  range of highly trained security guards to corporates and
-                  individual clients across Delhi NCR, Mumbai, Pune and other
-                  locations.
-                </p>
+                  <h3 className="mt-1 text-xl font-bold text-[#25282d]">
+                    Mr. Sudhir Singh
+                  </h3>
+
+                  <p className="mt-2 text-sm leading-6 text-gray-600">
+                    25+ years of management experience across Security, Facility
+                    Management and Allied Services.
+                  </p>
+                </div>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* RIGHT IMAGE */}
+          {/* IMAGE */}
           <motion.div
             initial={{ opacity: 0, x: 60 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -133,48 +188,57 @@ export default function AboutUs() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="absolute -left-4 -top-4 h-28 w-28 border-l-4 border-t-4 border-[#d83b32]" />
+            <div className="absolute -left-5 -top-5 h-28 w-28 border-l-4 border-t-4 border-[#d83b32]" />
 
             <div className="relative overflow-hidden rounded-2xl shadow-2xl">
               <img
                 src={aboutImage}
-                alt="Red Scorpion Security Team"
-                className="h-[500px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[650px]"
+                alt="Universal Security Services"
+                className="h-[480px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[600px]"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
 
-            <div className="absolute -bottom-6 -right-4 rounded-2xl bg-[#d83b32] px-7 py-5 text-white shadow-xl">
-              <p className="text-3xl font-bold">19+</p>
-              <p className="text-sm font-medium">Years of Experience</p>
+              <div className="absolute bottom-6 left-6 rounded-xl bg-white/95 px-6 py-4 shadow-xl backdrop-blur">
+                <p className="text-2xl font-extrabold text-[#d83b32]">25+</p>
+
+                <p className="text-sm font-semibold text-gray-700">
+                  Years of Leadership Experience
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* ================= WHAT WE OFFER ================= */}
-      <section className="bg-[#f8f8f8] px-5 py-20 sm:px-8 lg:px-12">
+      {/* =====================================================
+          KEY HIGHLIGHTS
+      ====================================================== */}
+      <section className="bg-[#f7f7f7] px-5 py-20 sm:px-8 lg:px-12">
         <div className="mx-auto max-w-[1350px]">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-12"
+            className="mb-12 text-center"
           >
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d83b32]">
               Our Strength
             </p>
 
-            <h2 className="mt-3 text-4xl font-bold text-[#24272d] sm:text-5xl">
-              Security Built Around
-              <span className="text-[#d83b32]"> Trust</span>
+            <h2 className="mt-3 text-4xl font-extrabold text-[#25282d]">
+              Why Choose <span className="text-[#d83b32]">UNIVERSAL?</span>
             </h2>
+
+            <p className="mx-auto mt-4 max-w-2xl text-gray-600">
+              Our experience, people and professional approach enable us to
+              deliver reliable security and allied solutions.
+            </p>
           </motion.div>
 
-          <div className="grid gap-6 md:grid-cols-3">
-            {services.map((item, index) => (
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {highlights.map((item, index) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 50 }}
@@ -182,100 +246,143 @@ export default function AboutUs() {
                 viewport={{ once: true }}
                 transition={{
                   duration: 0.6,
-                  delay: index * 0.12,
+                  delay: index * 0.1,
                 }}
-                whileHover={{ y: -8 }}
+                whileHover={{
+                  y: -10,
+                }}
                 className="group rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition hover:border-[#d83b32]/40 hover:shadow-xl"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#d83b32]/10 text-[#d83b32] transition group-hover:bg-[#d83b32] group-hover:text-white">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#d83b32]/10 text-[#d83b32] transition-all duration-300 group-hover:bg-[#d83b32] group-hover:text-white">
                   {item.icon}
                 </div>
 
-                <h3 className="mt-6 text-xl font-bold text-[#24272d]">
+                <p className="mt-6 text-3xl font-extrabold text-[#d83b32]">
+                  {item.number}
+                </p>
+
+                <h3 className="mt-2 text-lg font-bold text-[#25282d]">
                   {item.title}
                 </h3>
 
-                <p className="mt-3 leading-7 text-gray-600">{item.text}</p>
+                <p className="mt-3 text-sm leading-7 text-gray-600">
+                  {item.text}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ================= MISSION VISION ================= */}
+      {/* =====================================================
+          MANAGEMENT CADRE
+      ====================================================== */}
       <section className="bg-white px-5 py-20 sm:px-8 lg:px-12">
-        <div className="mx-auto grid max-w-[1350px] gap-8 md:grid-cols-2">
-          {/* Mission */}
-          <InfoCard
-            icon={<Target size={30} />}
-            title="Our Mission"
-            text="Our mission is to provide reliable, professional and safety-focused security solutions that protect our clients, their people, assets and premises. We continuously focus on training, discipline and service quality."
-          />
+        <div className="mx-auto grid max-w-[1350px] gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+          {/* LEFT */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+          >
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#d83b32]">
+              Our Management
+            </p>
 
-          {/* Vision */}
-          <InfoCard
-            icon={<Eye size={30} />}
-            title="Our Vision"
-            text="Our vision is to become one of India's most trusted security solutions providers by combining experienced professionals, advanced security practices and a client-first approach."
-          />
+            <h2 className="mt-3 text-3xl font-extrabold leading-tight text-[#25282d] sm:text-4xl">
+              Experienced People.
+              <br />
+              <span className="text-[#d83b32]">Strong Leadership.</span>
+            </h2>
+
+            <p className="mt-6 leading-8 text-gray-600">
+              Our management cadre comprises veterans and seasoned professionals
+              from security, military, police, para-military and facility
+              management backgrounds.
+            </p>
+          </motion.div>
+
+          {/* RIGHT */}
+          <div className="grid gap-4 sm:grid-cols-2">
+            {managementPoints.map((point, index) => (
+              <motion.div
+                key={point}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.08,
+                }}
+                className="flex items-center gap-4 rounded-xl border border-gray-200 bg-[#fafafa] p-5 transition hover:border-[#d83b32]/40 hover:bg-[#fff7f6]"
+              >
+                <CheckCircle2 size={23} className="shrink-0 text-[#d83b32]" />
+
+                <span className="font-semibold text-gray-800">{point}</span>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* ================= COMMITMENT ================= */}
-      <section className="bg-[#192235] px-5 py-20 text-white sm:px-8 lg:px-12">
-        <div className="mx-auto max-w-[1100px] text-center">
+      {/* =====================================================
+          OUR COMMITMENT
+      ====================================================== */}
+      <section className="relative overflow-hidden bg-[#192235] px-5 py-20 text-white sm:px-8 lg:px-12">
+        <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-[#d83b32]/20 blur-3xl" />
+
+        <div className="relative mx-auto max-w-[1100px] text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#d83b32]">
-              <CheckCircle2 size={32} />
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#d83b32] shadow-lg">
+              <ShieldCheck size={32} />
             </div>
 
             <p className="mt-7 text-sm font-bold uppercase tracking-[0.2em] text-[#ef6359]">
               Our Commitment
             </p>
 
-            <h2 className="mt-3 text-3xl font-bold sm:text-4xl">
-              Your Safety Is Our Responsibility
+            <h2 className="mt-3 text-3xl font-extrabold sm:text-5xl">
+              International Standards.
+              <br />
+              <span className="text-[#ef6359]">Innovative Solutions.</span>
             </h2>
 
             <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-300">
-              At Red Scorpion Security Solutions, we believe that security is
-              more than simply providing personnel. It is about creating a
-              dependable environment where businesses, employees, assets and
-              premises can operate with confidence.
+              UNIVERSAL is committed to providing Security, Facility Management
+              & Allied Services in line with International Standards. We provide
+              integrated, innovative solutions crafted to meet our clients'
+              specific challenges and facilitate the fulfilment of their
+              business requirements.
             </p>
           </motion.div>
         </div>
       </section>
 
-      
+      {/* =====================================================
+          FINAL STATEMENT
+      ====================================================== */}
+      <section className="bg-[#d83b32] px-5 py-12 text-center text-white">
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <p className="text-2xl font-extrabold sm:text-3xl">
+            We deliver what YOU DREAM !!!!!
+          </p>
+
+          <p className="mt-2 text-sm font-medium text-red-100">
+            Security • Facility Management • Allied Services
+          </p>
+        </motion.div>
+      </section>
     </>
-  );
-}
-
-/* ================= INFO CARD ================= */
-
-function InfoCard({ icon, title, text }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.7 }}
-      whileHover={{ y: -6 }}
-      className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition hover:border-[#d83b32]/30 hover:shadow-xl"
-    >
-      <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#d83b32]/10 text-[#d83b32]">
-        {icon}
-      </div>
-
-      <h2 className="mt-6 text-2xl font-bold text-[#24272d]">{title}</h2>
-
-      <p className="mt-4 leading-8 text-gray-600">{text}</p>
-    </motion.div>
   );
 }

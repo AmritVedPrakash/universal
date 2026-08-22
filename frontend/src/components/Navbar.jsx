@@ -15,12 +15,12 @@ export default function Navbar() {
       <div className="bg-white/20 backdrop-blur-[8px] border-b border-white/20">
        <div className="mx-auto flex h-[140px] max-w-[1500px] items-center px-5 md:px-8">
           {/* Logo */}
-          <div className="flex w-[230px] shrink-0 items-center">
+          <div className="flex w-[280px] shrink-0 items-center">
             <Link to="/" onClick={closeMenu}>
               <img
                 src={logo}
                 alt="Red Scorpion Security Solutions"
-                className="w-[150px] object-contain sm:w-[175px] md:w-[200px]"
+                className="w-[150px] object-contain sm:w-[175px] md:w-[130px]"
               />
             </Link>
           </div>
@@ -43,6 +43,15 @@ export default function Navbar() {
                   className="transition duration-300 hover:text-red-700"
                 >
                   Services
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  to="/quality"
+                  className="transition duration-300 hover:text-red-700"
+                >
+                  Quality
                 </Link>
               </li>
 

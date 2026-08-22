@@ -11,6 +11,8 @@ import StatsSection from "../components/StatsSection.jsx";
 import AnHonestService from "../components/AnHonestService.jsx";
 import Experience from "../components/experience.jsx";
 import OurTestimonials from "../components/OurTestimonials.jsx";
+import Team from "./Team.jsx";
+import SecurityServices from "../components/services/SecurityServices.jsx";
 
 function Home() {
   return (
@@ -19,10 +21,13 @@ function Home() {
 
       <main>
         <HeroSection />
-        <ServicesSection />
+        {/* <ServicesSection /> */}
         <OurClients/>
         <AboutSecurity/>
+        <Team/>
+        {/* <SecurityServices/> */}
         <StatsSection/>
+        
         <AnHonestService/>
         <Experience/>
         <OurTestimonials/>
