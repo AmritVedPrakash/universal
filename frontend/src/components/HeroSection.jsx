@@ -6,7 +6,7 @@ import heroImage from "../assets/hero/hero.jpg";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-[calc(100vh-140px)] min-h-[600px] overflow-hidden">
+    <section className="relative w-full h-[calc(140vh-140px)] min-h-[600px] overflow-hidden">
       {/* ================= HERO IMAGE ================= */}
       <img
         src={heroImage}
