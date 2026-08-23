@@ -89,9 +89,9 @@ export default function HeroSection() {
                   drop-shadow-lg
                 "
               >
-                Need a Quality Security
-                <br />
-                Guard Services for Your Business
+                Your Safety Is Our Responsibility —  <br /> Trusted Security Services.
+               
+               
               </h1>
             </motion.div>
 
@@ -135,7 +135,7 @@ export default function HeroSection() {
 
                 <div>
                   <h3 className="text-xl md:text-2xl font-bold text-white">
-                    +91 8711021102
+                    +91 9560662367
                   </h3>
 
                   <p className="text-white/80 mt-1 text-sm">
@@ -145,26 +145,29 @@ export default function HeroSection() {
               </div>
 
               {/* CONTACT BUTTON CARD */}
-              <motion.button
+              <motion.a
+                href="tel:+919560662367"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 className="
-                  w-full
-                  sm:w-[340px]
-                  md:w-[360px]
-                  bg-[#d83b32]
-                  text-white
-                  py-4
-                  rounded-2xl
-                  font-semibold
-                  text-lg
-                  shadow-xl
-                  hover:bg-[#c3312a]
-                  transition-colors
-                "
+    w-full
+    sm:w-[340px]
+    md:w-[360px]
+    bg-[#d83b32]
+    text-white
+    py-4
+    rounded-2xl
+    font-semibold
+    text-lg
+    shadow-xl
+    hover:bg-[#c3312a]
+    transition-colors
+    text-center
+    cursor-pointer
+  "
               >
                 Contact Now
-              </motion.button>
+              </motion.a>
             </motion.div>
           </div>
         </div>

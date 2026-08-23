@@ -10,7 +10,7 @@ export default function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="relative z-50 w-full">
+   <nav className="sticky top-0 z-50 w-full">
       {/* Navbar Background */}
       <div className="bg-white/20 backdrop-blur-[8px] border-b border-white/20">
        <div className="mx-auto flex h-[140px] max-w-[1500px] items-center px-5 md:px-8">
@@ -20,7 +20,7 @@ export default function Navbar() {
               <img
                 src={logo}
                 alt="Red Scorpion Security Solutions"
-                className="w-[150px] object-contain sm:w-[175px] md:w-[130px]"
+                className="w-[140px] object-contain sm:w-[175px] md:w-[130px]"
               />
             </Link>
           </div>

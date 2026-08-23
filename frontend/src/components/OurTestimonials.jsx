@@ -1,278 +1,150 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-
-// import krrish from "../assets/hero/krrish.png";
-// import magic from "../assets/hero/magic.png";
-// import blackberry from "../assets/hero/blackberry.png";
-// import adeptia from "../assets/hero/adeptia.png";
-// import nhdc from "../assets/hero/nhdc.png";
-// import jcb from "../assets/hero/jcb.png";
+import React from "react";
+import { motion } from "framer-motion";
+import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    // logo: krrish,
     name: "KRRISH",
-    location: "Luxury Lifestyle",
+    subtitle: "Luxury Lifestyle",
     text: "Our company has been doing business with Red Scorpion Security for many consecutive years. They are the best service provider in its kind. They are extremely accommodating and excel in performance.",
   },
-
   {
-    // logo: magic,
     name: "Magic Auto",
-    location: "Sector 13, Noida",
+    subtitle: "Sector 13, Noida",
     text: "Thank you Red Scorpion Security for ensuring safety and security round the clock. Your professionalism exceeded our expectation and we look forward with you.",
   },
-
   {
-    // logo: blackberry,
     name: "Blackberrys",
-    location: "",
-    text: "We are glad to have discovered Red Scorpion Security. The kind of services they deliver meet our expectations. They deal with all kind of professional help required by a company.",
+    subtitle: "Corporate Client",
+    text: "We are glad to have discovered Red Scorpion Security. The kind of services they deliver meet our expectations. They deal with all kind of professional help required by a company for growth.",
   },
-
   {
-    // logo: adeptia,
-    name: "Adeptia Software",
-    location: "Sector 63, Noida",
+    name: "Adepta Software",
+    subtitle: "Sector 63, Noida",
     text: "We are pleased by the Security services provided by Red Scorpion Security. The staff is very much professional and well trained.",
   },
-
   {
-    // logo: nhdc,
     name: "NHDC",
-    location: "Govt. Organization",
-    text: "We highly recommend Red Scorpion Security for the top notch services. The services are outstanding and security guards are highly trained and observant.",
+    subtitle: "Govt. Organization",
+    text: "We highly recommend Red Scorpion Security for the top notch services. The services are outstanding and security guards are highly trained and are observant.",
   },
-
   {
-    // logo: jcb,
     name: "JCB",
-    location: "Sector 2, Noida",
+    subtitle: "Sector 2, Noida",
     text: "After hiring security personnel from Red Scorpion Security, I must say that they follow professional ethics very much organised and make sure things go smoothly.",
   },
 ];
 
 export default function OurTestimonials() {
-  const [start, setStart] = useState(0);
-
-  const next = () => {
-    setStart((prev) => (prev + 3 >= testimonials.length ? 0 : prev + 3));
-  };
-
-  const prev = () => {
-    setStart((prev) => (prev - 3 < 0 ? testimonials.length - 3 : prev - 3));
-  };
-
-  const visible = testimonials.slice(start, start + 3);
-
   return (
-    <section className="py-24 bg-white overflow-hidden">
-      {/* Heading */}
+    <section className="relative overflow-hidden bg-white px-5 py-20 sm:py-24">
+      {/* Background decoration */}
+      <div className="pointer-events-none absolute left-[-120px] top-20 h-64 w-64 rounded-full bg-red-100/50 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-0 right-[-100px] h-72 w-72 rounded-full bg-red-50 blur-3xl" />
 
-      <motion.div
-        initial={{
-          opacity: 0,
-          y: -40,
-        }}
-        whileInView={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 0.6,
-        }}
-        className="text-center mb-14"
-      >
-        <h2
-          className="
-text-4xl
-md:text-5xl
-font-bold
-text-[#22252b]
-"
+      <div className="relative mx-auto max-w-[1350px]">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="mb-14 text-center"
         >
-          <span className="text-[#d83b32]">OUR</span> TESTIMONIALS
-        </h2>
-      </motion.div>
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#d83b32]">
+            Client Reviews
+          </p>
 
-      <div
-        className="
-max-w-[1350px]
-mx-auto
-px-6
-relative
-"
-      >
-        {/* Left Button */}
+          <h2 className="text-4xl font-bold tracking-tight text-[#20232a] sm:text-5xl">
+            Our <span className="text-[#d83b32]">Testimonials</span>
+          </h2>
 
-        <button
-          onClick={prev}
-          className="
-absolute
-left-0
-top-1/2
--translate-y-1/2
-z-20
-bg-white
-shadow-xl
-w-12
-h-12
-rounded-full
-flex
-items-center
-justify-center
-hover:bg-[#d83b32]
-hover:text-white
-transition
-"
-        >
-          <ChevronLeft />
-        </button>
+          <div className="mx-auto mt-5 h-1 w-16 rounded-full bg-[#d83b32]" />
+
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-gray-600">
+            Trusted by businesses and organizations for professional, reliable
+            and highly trained security services.
+          </p>
+        </motion.div>
 
         {/* Cards */}
+        <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
+          {testimonials.map((item, index) => (
+            <motion.article
+              key={item.name}
+              initial={{
+                opacity: 0,
+                y: 50,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.15,
+              }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+              }}
+              whileHover={{
+                y: -10,
+              }}
+              className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-7 shadow-[0_8px_30px_rgba(0,0,0,0.07)] transition-shadow duration-300 hover:shadow-[0_18px_45px_rgba(216,59,50,0.15)]"
+            >
+              {/* Red top line */}
+              <div className="absolute left-0 right-0 top-0 h-1 bg-[#d83b32]" />
 
-        <div
-          className="
-grid
-md:grid-cols-3
-gap-8
-px-10
-"
-        >
-          <AnimatePresence mode="wait">
-            {visible.map((item, index) => (
-              <motion.div
-                key={item.name}
-                initial={{
-                  opacity: 0,
-                  y: 50,
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: -40,
-                }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
-                }}
-                whileHover={{
-                  y: -10,
-                }}
-                className="
-relative
-border
-border-gray-200
-bg-white
-p-8
-min-h-[420px]
-shadow-sm
-hover:shadow-2xl
-transition
-overflow-hidden
-"
-              >
-                {/* Background Shape */}
+              {/* Quote */}
+              <div className="absolute right-6 top-5 opacity-10 transition-all duration-300 group-hover:scale-110 group-hover:opacity-20">
+                <Quote size={65} className="text-[#d83b32]" />
+              </div>
 
-                <div
-                  className="
-absolute
-top-0
-right-0
-w-40
-h-40
-bg-gray-100
-rounded-bl-full
-opacity-50
-"
-                ></div>
-
-                <div
-                  className="
-flex
-items-center
-gap-6
-mb-8
-relative
-z-10
-"
-                >
-                  <img
-                    src={item.logo}
-                    alt={item.name}
-                    className="
-w-20
-h-20
-object-contain
-"
+              {/* Stars */}
+              <div className="mb-6 flex gap-1">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <Star
+                    key={star}
+                    size={17}
+                    className="fill-[#d83b32] text-[#d83b32]"
                   />
+                ))}
+              </div>
 
-                  <div>
-                    <h3
-                      className="
-text-2xl
-font-bold
-text-[#22252b]
-"
-                    >
-                      {item.name}
-                    </h3>
-
-                    <p
-                      className="
-text-[#d83b32]
-"
-                    >
-                      {item.location}
-                    </p>
-                  </div>
+              {/* Client */}
+              <div className="relative mb-6 flex items-center gap-4">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#d83b32] text-lg font-bold text-white shadow-md">
+                  {item.name.charAt(0)}
                 </div>
 
-                <p
-                  className="
-text-gray-700
-text-lg
-leading-8
-relative
-z-10
-"
-                >
-                  {item.text}
-                </p>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+                <div>
+                  <h3 className="text-xl font-bold text-[#20232a]">
+                    {item.name}
+                  </h3>
+
+                  <p className="mt-1 text-sm font-medium text-[#d83b32]">
+                    {item.subtitle}
+                  </p>
+                </div>
+              </div>
+
+              {/* Testimonial */}
+              <p className="relative text-[15px] leading-7 text-gray-600">
+                “{item.text}”
+              </p>
+
+              {/* Bottom accent */}
+              <div className="mt-7 flex items-center justify-between">
+                <span className="h-[2px] w-12 rounded-full bg-[#d83b32] transition-all duration-300 group-hover:w-20" />
+
+                <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">
+                  Verified Client
+                </span>
+              </div>
+            </motion.article>
+          ))}
         </div>
-
-        {/* Right Button */}
-
-        <button
-          onClick={next}
-          className="
-absolute
-right-0
-top-1/2
--translate-y-1/2
-z-20
-bg-white
-shadow-xl
-w-12
-h-12
-rounded-full
-flex
-items-center
-justify-center
-hover:bg-[#d83b32]
-hover:text-white
-transition
-"
-        >
-          <ChevronRight />
-        </button>
       </div>
     </section>
   );

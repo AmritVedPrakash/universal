@@ -19,6 +19,8 @@ import securityImage2 from "../../assets/services/security-service-2.jpg";
 import ServicesSection from "../ServicesSection";
 import MannedGuarding from "./MannedGuarding";
 import CanneSquads from "./CanneSquads";
+import FacilityManagementServices from "./FacilityManagementServices";
+import ScopeOfService from "./ScopeOfService";
 
 export default function SecurityServices() {
   const process = [
@@ -248,6 +250,8 @@ export default function SecurityServices() {
         {/* <ServicesSection/> */}
         <MannedGuarding/>
         <CanneSquads/>
+        <FacilityManagementServices/>
+        <ScopeOfService/>
       </div>
     </section>
   );
