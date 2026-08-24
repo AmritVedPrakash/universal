@@ -99,7 +99,7 @@ export default function ContactUs() {
             <strong className="text-white">Universal Security Solutions</strong>{" "}
             is a trusted security and facility management company providing
             professional protection solutions with over{" "}
-            <strong className="text-white">25+ years of experience</strong> in
+            <strong className="text-white">16+ years of experience</strong> in
             the security industry.
           </motion.p>
 
@@ -242,8 +242,8 @@ export default function ContactUs() {
               <ContactInfo
                 icon={<Mail size={27} />}
                 title="E Mail"
-                value="universalprotection786@gmail.com"
-                href="mailto:universalprotection786@gmail.com"
+                value="Hr@universalprotection.in"
+                href="mailto:Hr@universalprotection.in"
               />
 
               <ContactInfo
@@ -251,19 +251,18 @@ export default function ContactUs() {
                 title="Phone"
                 value={
                   <>
-                    +91 9560662367
-                    <br />
+                    
                     +91 7042849777
                   </>
                 }
-                href="tel:+919560662367"
+                href="tel:+917042849777"
               />
 
               <ContactInfo
                 icon={<MessageCircle size={27} />}
                 title="WhatsApp"
                 value="+91 9560662367"
-                href="https://wa.me/919560662367"
+                href="https://wa.me/7042849777"
               />
 
               <ContactInfo

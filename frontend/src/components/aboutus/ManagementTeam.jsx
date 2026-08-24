@@ -96,7 +96,7 @@ export default function ManagementTeam() {
 
     {
       name: "Brig Harry Sandhu",
-      role: "Security & Defence Specialist",
+      role: "CEO",
       icon: <Award />,
       image: harry,
       description:
@@ -109,7 +109,7 @@ export default function ManagementTeam() {
 
     {
       name: "Mr. Sudhir Singh Lohia",
-      role: "CEO & COO",
+      role: "COO",
       icon: <Crown />,
       image: sudhir,
       description:
@@ -502,7 +502,7 @@ export default function ManagementTeam() {
                 <p
                   className="
                     mt-5
-                    text-sm
+                    text-25px
                     leading-7
                     text-blue-100/55
                   "

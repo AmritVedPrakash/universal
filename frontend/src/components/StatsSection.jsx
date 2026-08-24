@@ -3,15 +3,15 @@ import { motion } from "framer-motion";
 
 const stats = [
   {
-    number: 25,
+    number: 16,
     label: "Years of Experience",
   },
   {
-    number: 5200,
+    number: 1500,
     label: "Security Guards Deployed",
   },
   {
-    number: 16,
+    number: 77,
     label: "Locations",
   },
   {

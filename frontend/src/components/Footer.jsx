@@ -287,16 +287,7 @@ function Footer() {
                 Phone
               </p>
 
-              <a
-                href="tel:+919560662367"
-                className="
-                  block
-                  transition
-                  hover:text-[#ef6359]
-                "
-              >
-                +91 9560662367
-              </a>
+            
 
               <a
                 href="tel:+917042849777"
@@ -334,8 +325,20 @@ function Footer() {
                   hover:text-[#ef6359]
                 "
               >
-                universalprotection786@gmail.com
+                Hr@universalprotection.in
               </a>
+              <div>
+              <a
+                href="mailto:universalprotection786@gmail.com"
+                className="
+                  break-all
+                  transition
+                  hover:text-[#ef6359]
+                "
+              >
+                sudhir@universalprotection.in
+              </a>
+              </div>
 
             </div>
 

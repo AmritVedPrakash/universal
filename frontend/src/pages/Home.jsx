@@ -15,6 +15,7 @@ import Team from "./Team.jsx";
 import SecurityServices from "../components/services/SecurityServices.jsx";
 import TransitionProcess from "../components/TransitionProcess.jsx";
 import WhyUniversal from "../components/WhyUniversal.jsx";
+import ManagementTeam from "../components/aboutus/ManagementTeam.jsx";
 
 function Home() {
   return (
@@ -23,21 +24,19 @@ function Home() {
 
       <main>
         <HeroSection />
-        {/* <ServicesSection /> */}
+       
         <OurClients/>
-        {/* <AboutSecurity/> */}
-        <Team/>
+        
+        <ManagementTeam />
+        {/* <Team/> */}
         <TransitionProcess/>
         <WhyUniversal/>
         {/* <SecurityServices/> */}
         <StatsSection/>
         
-        {/* <AnHonestService/>
-        <Experience/> */}
+        
         <OurTestimonials/>
-        {/* <WhyChooseUs />
-        <Testimonials />
-        <CTASection /> */}
+        
       </main>
       {/* <Footer /> */}
     </>

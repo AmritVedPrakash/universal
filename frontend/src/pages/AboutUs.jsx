@@ -17,7 +17,7 @@ export default function AboutUs() {
   const highlights = [
     {
       icon: <Award size={28} />,
-      number: "25+",
+      number: "16+",
       title: "Years of Experience",
       text: "Our Founder Chairman, Mr. Sudhir Singh, brings over 25 years of experience in security and allied services.",
     },
@@ -160,7 +160,7 @@ export default function AboutUs() {
 
               <p>
                 He has
-                <strong className="text-white"> 25 years of experience</strong>
+                <strong className="text-white"> 16 years of experience</strong>
                 in top-level Management Positions with leading Security & Allied
                 Services Companies, operating in India & Overseas, since 1995.
               </p>
@@ -185,11 +185,11 @@ export default function AboutUs() {
                   </p>
 
                   <h3 className="mt-1 text-xl font-bold text-white">
-                    Mr. Sudhir Singh
+                    Mrs. Saroj Singh
                   </h3>
 
                   <p className="mt-2 text-sm leading-6 text-blue-100/60">
-                    25+ years of management experience across Security, Facility
+                    16+ years of management experience across Security, Facility
                     Management and Allied Services.
                   </p>
                 </div>
@@ -220,7 +220,7 @@ export default function AboutUs() {
 
               {/* Image Badge */}
               <div className="absolute bottom-6 left-6 rounded-xl border border-white/10 bg-[#071a35]/90 px-6 py-4 shadow-xl backdrop-blur-xl">
-                <p className="text-2xl font-extrabold text-[#ef6359]">25+</p>
+                <p className="text-2xl font-extrabold text-[#ef6359]">16+</p>
 
                 <p className="text-sm font-semibold text-blue-100/80">
                   Years of Leadership Experience
@@ -426,7 +426,7 @@ export default function AboutUs() {
       </section>
 
       {/* MANAGEMENT TEAM */}
-      <ManagementTeam />
+      {/* <ManagementTeam /> */}
     </>
   );
 }

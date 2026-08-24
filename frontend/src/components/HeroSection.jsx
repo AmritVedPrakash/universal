@@ -135,7 +135,7 @@ export default function HeroSection() {
 
                 <div>
                   <h3 className="text-xl md:text-2xl font-bold text-white">
-                    +91 9560662367
+                    +91 7042849777
                   </h3>
 
                   <p className="text-white/80 mt-1 text-sm">
@@ -146,7 +146,7 @@ export default function HeroSection() {
 
               {/* CONTACT BUTTON CARD */}
               <motion.a
-                href="tel:+919560662367"
+                href="tel:+917042849777"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 className="
