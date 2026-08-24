@@ -12,10 +12,8 @@ import {
 // =====================================================
 // MANUAL IMAGE IMPORT
 // =====================================================
-// Apne actual filename ke according change karna
+
 import qualityLogo from "../../assets/quality/quality-logo.png";
-
-
 
 export default function Quality() {
   const qualities = [
@@ -64,22 +62,28 @@ export default function Quality() {
   ];
 
   return (
-    
-    <section className="relative overflow-hidden bg-white px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
-
+    <section className="relative overflow-hidden bg-[#06152e] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-24">
       {/* =====================================================
-          BACKGROUND DECORATION
+          PREMIUM DARK BLUE BACKGROUND
+          NO GRID / NO PATTERN
       ====================================================== */}
 
-      <div className="pointer-events-none absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d83b32]/5 blur-3xl" />
+      {/* Large top-left blue glow */}
+      <div className="pointer-events-none absolute -left-48 -top-40 h-[550px] w-[550px] rounded-full bg-[#0d5bd7]/15 blur-[130px]" />
 
-      <div className="pointer-events-none absolute -left-40 top-20 h-80 w-80 rounded-full bg-[#d83b32]/5 blur-3xl" />
+      {/* Large top-right blue glow */}
+      <div className="pointer-events-none absolute -right-48 top-0 h-[550px] w-[550px] rounded-full bg-[#1466c8]/15 blur-[130px]" />
 
-      <div className="pointer-events-none absolute -right-40 bottom-20 h-80 w-80 rounded-full bg-[#192235]/5 blur-3xl" />
+      {/* Bottom-left blue glow */}
+      <div className="pointer-events-none absolute -bottom-48 -left-40 h-[500px] w-[500px] rounded-full bg-[#123e78]/20 blur-[130px]" />
 
+      {/* Bottom-right subtle red glow */}
+      <div className="pointer-events-none absolute -bottom-40 -right-40 h-[450px] w-[450px] rounded-full bg-[#d83b32]/5 blur-[130px]" />
+
+      {/* Center blue glow */}
+      <div className="pointer-events-none absolute left-1/2 top-[48%] h-[450px] w-[450px] -translate-x-1/2 rounded-full bg-[#0d5bd7]/8 blur-[140px]" />
 
       <div className="relative mx-auto max-w-[1350px]">
-
         {/* =====================================================
             HEADER
         ====================================================== */}
@@ -91,83 +95,187 @@ export default function Quality() {
           transition={{ duration: 0.7 }}
           className="text-center"
         >
+          {/* Section Label */}
 
           <div className="flex items-center justify-center gap-4">
-
             <span className="h-[2px] w-12 bg-[#d83b32]" />
 
-            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#d83b32]">
+            <p className="text-sm font-bold uppercase tracking-[0.25em] text-[#ef6359]">
               Our Standards
             </p>
 
             <span className="h-[2px] w-12 bg-[#d83b32]" />
-
           </div>
 
+          {/* Heading */}
 
-          <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-[#24272d] sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Qualities of a
-            <span className="text-[#d83b32]"> Trained Security Guard</span>
+            <span className="text-[#ef6359]"> Trained Security Guard</span>
           </h1>
 
+          {/* Description */}
 
-          <p className="mx-auto mt-5 max-w-2xl leading-8 text-gray-600">
+          <p className="mx-auto mt-5 max-w-2xl leading-8 text-blue-100/65">
             Every trained security professional is expected to demonstrate
             discipline, awareness, integrity and the knowledge required to
             deliver dependable security services.
           </p>
-
         </motion.div>
-
 
         {/* =====================================================
             DESKTOP ORBIT SECTION
         ====================================================== */}
 
         <div className="relative mx-auto mt-16 hidden h-[700px] max-w-[1150px] lg:block">
-
-          {/* Orbit Ring */}
+          {/* =====================================================
+              OUTER ORBIT
+          ====================================================== */}
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.7 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#d83b32]/10"
+            initial={{
+              opacity: 0,
+              scale: 0.7,
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 1,
+            }}
+            className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#4f8ed8]/20"
+          />
+
+          {/* =====================================================
+              INNER ORBIT
+          ====================================================== */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              scale: 0.7,
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 1.2,
+              delay: 0.2,
+            }}
+            className="absolute left-1/2 top-1/2 h-[370px] w-[370px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#d83b32]/25"
+          />
+
+          {/* =====================================================
+              ORBIT GLOW
+          ====================================================== */}
+
+          <div className="pointer-events-none absolute left-1/2 top-1/2 h-[470px] w-[470px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0d5bd7]/5 blur-[80px]" />
+
+          {/* =====================================================
+              CONNECTING DOTS
+          ====================================================== */}
+
+          <motion.div
+            animate={{
+              opacity: [0.5, 1, 0.5],
+              scale: [1, 1.25, 1],
+            }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+            }}
+            className="absolute left-1/2 top-[105px] h-3 w-3 -translate-x-1/2 rounded-full bg-[#d83b32] shadow-[0_0_18px_rgba(216,59,50,0.7)]"
           />
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.7 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.2, delay: 0.2 }}
-            className="absolute left-1/2 top-1/2 h-[370px] w-[370px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-[#d83b32]/20"
+            animate={{
+              opacity: [0.5, 1, 0.5],
+              scale: [1, 1.25, 1],
+            }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              delay: 0.4,
+            }}
+            className="absolute right-[170px] top-[245px] h-3 w-3 rounded-full bg-[#d83b32] shadow-[0_0_18px_rgba(216,59,50,0.7)]"
           />
 
+          <motion.div
+            animate={{
+              opacity: [0.5, 1, 0.5],
+              scale: [1, 1.25, 1],
+            }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              delay: 0.8,
+            }}
+            className="absolute right-[170px] bottom-[230px] h-3 w-3 rounded-full bg-[#d83b32] shadow-[0_0_18px_rgba(216,59,50,0.7)]"
+          />
 
-          {/* Connecting dots */}
+          <motion.div
+            animate={{
+              opacity: [0.5, 1, 0.5],
+              scale: [1, 1.25, 1],
+            }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              delay: 1.2,
+            }}
+            className="absolute left-1/2 bottom-[90px] h-3 w-3 -translate-x-1/2 rounded-full bg-[#d83b32] shadow-[0_0_18px_rgba(216,59,50,0.7)]"
+          />
 
-          <div className="absolute left-1/2 top-[105px] h-3 w-3 -translate-x-1/2 rounded-full bg-[#d83b32]" />
+          <motion.div
+            animate={{
+              opacity: [0.5, 1, 0.5],
+              scale: [1, 1.25, 1],
+            }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              delay: 1.6,
+            }}
+            className="absolute left-[170px] bottom-[230px] h-3 w-3 rounded-full bg-[#d83b32] shadow-[0_0_18px_rgba(216,59,50,0.7)]"
+          />
 
-          <div className="absolute right-[170px] top-[245px] h-3 w-3 rounded-full bg-[#d83b32]" />
+          <motion.div
+            animate={{
+              opacity: [0.5, 1, 0.5],
+              scale: [1, 1.25, 1],
+            }}
+            transition={{
+              duration: 2.5,
+              repeat: Infinity,
+              delay: 2,
+            }}
+            className="absolute left-[170px] top-[245px] h-3 w-3 rounded-full bg-[#d83b32] shadow-[0_0_18px_rgba(216,59,50,0.7)]"
+          />
 
-          <div className="absolute right-[170px] bottom-[230px] h-3 w-3 rounded-full bg-[#d83b32]" />
-
-          <div className="absolute left-1/2 bottom-[90px] h-3 w-3 -translate-x-1/2 rounded-full bg-[#d83b32]" />
-
-          <div className="absolute left-[170px] bottom-[230px] h-3 w-3 rounded-full bg-[#d83b32]" />
-
-          <div className="absolute left-[170px] top-[245px] h-3 w-3 rounded-full bg-[#d83b32]" />
-
-
-          {/* =================================================
+          {/* =====================================================
               CENTER LOGO
-          ================================================= */}
+          ====================================================== */}
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
+            initial={{
+              opacity: 0,
+              scale: 0.5,
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+            }}
+            viewport={{
+              once: true,
+            }}
             transition={{
               duration: 0.8,
               delay: 0.3,
@@ -175,8 +283,22 @@ export default function Quality() {
             }}
             className="absolute left-1/2 top-1/2 z-20 flex h-56 w-56 -translate-x-1/2 -translate-y-1/2 items-center justify-center"
           >
+            {/* Outer Glow */}
 
-            {/* Pulse */}
+            <motion.div
+              animate={{
+                scale: [1, 1.1, 1],
+                opacity: [0.25, 0.08, 0.25],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              className="absolute inset-0 rounded-full bg-[#d83b32] blur-xl"
+            />
+
+            {/* Pulse Ring */}
 
             <motion.div
               animate={{
@@ -188,25 +310,25 @@ export default function Quality() {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute inset-0 rounded-full bg-[#d83b32]"
+              className="absolute inset-2 rounded-full border-2 border-[#d83b32]"
             />
 
-            <div className="relative flex h-44 w-44 items-center justify-center rounded-full border-[6px] border-[#d83b32] bg-white p-5 shadow-2xl">
+            {/* Logo Container */}
+
+            <div className="relative flex h-44 w-44 items-center justify-center rounded-full border-[6px] border-[#d83b32] bg-[#102f57] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
+              <div className="absolute inset-2 rounded-full border border-blue-200/10" />
 
               <img
                 src={qualityLogo}
                 alt="Universal Security"
-                className="h-full w-full object-contain"
+                className="relative z-10 h-full w-full object-contain"
               />
-
             </div>
-
           </motion.div>
 
-
-          {/* =================================================
+          {/* =====================================================
               QUALITY CARDS
-          ================================================= */}
+          ====================================================== */}
 
           {/* TOP */}
 
@@ -216,7 +338,6 @@ export default function Quality() {
             delay={0.1}
           />
 
-
           {/* LEFT TOP */}
 
           <QualityCard
@@ -224,7 +345,6 @@ export default function Quality() {
             className="absolute left-0 top-[170px] w-[280px]"
             delay={0.2}
           />
-
 
           {/* RIGHT TOP */}
 
@@ -234,7 +354,6 @@ export default function Quality() {
             delay={0.3}
           />
 
-
           {/* LEFT BOTTOM */}
 
           <QualityCard
@@ -242,7 +361,6 @@ export default function Quality() {
             className="absolute bottom-[115px] left-0 w-[280px]"
             delay={0.4}
           />
-
 
           {/* RIGHT BOTTOM */}
 
@@ -252,7 +370,6 @@ export default function Quality() {
             delay={0.5}
           />
 
-
           {/* BOTTOM */}
 
           <QualityCard
@@ -260,41 +377,49 @@ export default function Quality() {
             className="absolute bottom-0 left-1/2 w-[290px] -translate-x-1/2"
             delay={0.6}
           />
-
         </div>
-
 
         {/* =====================================================
             MOBILE / TABLET VERSION
         ====================================================== */}
 
         <div className="mt-14 lg:hidden">
-
-          {/* Center Logo */}
+          {/* =====================================================
+              CENTER LOGO
+          ====================================================== */}
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="mx-auto flex h-48 w-48 items-center justify-center rounded-full border-[6px] border-[#d83b32] bg-white p-6 shadow-2xl"
+            initial={{
+              opacity: 0,
+              scale: 0.8,
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.7,
+            }}
+            className="relative mx-auto flex h-48 w-48 items-center justify-center rounded-full border-[6px] border-[#d83b32] bg-[#102f57] p-6 shadow-[0_20px_60px_rgba(0,0,0,0.45)]"
           >
+            <div className="absolute inset-2 rounded-full border border-blue-200/10" />
 
             <img
               src={qualityLogo}
               alt="Universal Security"
-              className="h-full w-full object-contain"
+              className="relative z-10 h-full w-full object-contain"
             />
-
           </motion.div>
 
-
-          {/* Mobile Cards */}
+          {/* =====================================================
+              MOBILE CARDS
+          ====================================================== */}
 
           <div className="mt-12 grid gap-5 sm:grid-cols-2">
-
             {qualities.map((item, index) => (
-
               <motion.div
                 key={item.title}
                 initial={{
@@ -316,68 +441,86 @@ export default function Quality() {
                 whileHover={{
                   y: -6,
                 }}
-                className="group rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all duration-300 hover:border-[#d83b32]/40 hover:shadow-xl"
+                className="group relative overflow-hidden rounded-2xl border border-blue-200/10 bg-[#0b2344]/90 p-6 shadow-[0_15px_45px_rgba(0,0,0,0.25)] backdrop-blur-xl transition-all duration-300 hover:border-[#d83b32]/40 hover:bg-[#102b50] hover:shadow-[0_20px_55px_rgba(0,0,0,0.35)]"
               >
+                {/* Card Glow */}
 
-                <div className="flex items-start gap-4">
+                <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#0d5bd7]/0 blur-3xl transition-all duration-500 group-hover:bg-[#0d5bd7]/15" />
 
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#d83b32]/10 text-[#d83b32] transition-all duration-300 group-hover:bg-[#d83b32] group-hover:text-white">
+                <div className="relative flex items-start gap-4">
+                  {/* Icon */}
+
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#102f57] text-[#8db8e8] transition-all duration-300 group-hover:bg-[#d83b32] group-hover:text-white group-hover:shadow-[0_8px_25px_rgba(216,59,50,0.25)]">
                     {item.icon}
                   </div>
 
                   <div>
+                    {/* Title */}
 
-                    <h3 className="text-lg font-bold capitalize text-[#24272d]">
+                    <h3 className="text-lg font-bold capitalize text-white">
                       {item.title}
                     </h3>
 
+                    {/* Accent */}
+
                     <div className="mt-2 h-1 w-8 rounded-full bg-[#d83b32] transition-all duration-300 group-hover:w-14" />
 
-                    <p className="mt-3 text-sm leading-6 text-gray-600">
+                    {/* Description */}
+
+                    <p className="mt-3 text-sm leading-6 text-blue-100/55">
                       {item.description}
                     </p>
-
                   </div>
-
                 </div>
 
+                {/* Bottom Hover Line */}
+
+                <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#d83b32] transition-all duration-500 group-hover:w-full" />
               </motion.div>
-
             ))}
-
           </div>
-
         </div>
-
 
         {/* =====================================================
             BOTTOM INFORMATION STRIP
         ====================================================== */}
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mx-auto mt-10 max-w-4xl rounded-2xl border border-[#d83b32]/10 bg-[#fff7f6] px-6 py-6 text-center"
+          initial={{
+            opacity: 0,
+            y: 30,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          className="relative mx-auto mt-12 max-w-4xl overflow-hidden rounded-2xl border border-blue-200/10 bg-gradient-to-r from-[#0b2344] via-[#102f57] to-[#0b2344] px-6 py-7 text-center shadow-[0_18px_55px_rgba(0,0,0,0.3)]"
         >
+          {/* Glow */}
 
-          <p className="text-sm font-semibold leading-7 text-gray-600 sm:text-base">
-            <span className="font-bold text-[#d83b32]">
+          <div className="pointer-events-none absolute left-1/2 top-0 h-24 w-[400px] -translate-x-1/2 rounded-full bg-[#d83b32]/8 blur-[70px]" />
+
+          <p className="relative text-sm font-semibold leading-7 text-blue-100/65 sm:text-base">
+            <span className="font-bold text-[#ef6359]">
               Professional • Vigilant • Loyal • Fit • Knowledgeable
-            </span>
-            {" "}
+            </span>{" "}
             — the qualities that define a trained security professional.
           </p>
 
+          {/* Accent */}
+
+          <div className="mx-auto mt-4 h-1 w-12 rounded-full bg-[#d83b32]" />
         </motion.div>
-
       </div>
-
     </section>
   );
 }
-
 
 /* =========================================================
    REUSABLE QUALITY CARD
@@ -407,42 +550,49 @@ function QualityCard({ item, className, delay }) {
       }}
       className={`${className} group z-10`}
     >
-
-      <div className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-5 shadow-lg transition-all duration-300 group-hover:border-[#d83b32]/40 group-hover:shadow-2xl">
-
-        {/* Decorative red line */}
+      <div className="relative overflow-hidden rounded-2xl border border-blue-200/10 bg-[#0b2344]/95 p-5 shadow-[0_15px_45px_rgba(0,0,0,0.3)] backdrop-blur-xl transition-all duration-300 group-hover:border-[#d83b32]/40 group-hover:bg-[#102b50] group-hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
+        {/* =====================================================
+            RED SIDE ACCENT
+        ====================================================== */}
 
         <div className="absolute left-0 top-0 h-full w-1 bg-[#d83b32] transition-all duration-300 group-hover:w-2" />
 
+        {/* =====================================================
+            BLUE CARD GLOW
+        ====================================================== */}
 
-        <div className="flex items-center gap-4">
+        <div className="pointer-events-none absolute -right-12 -top-12 h-28 w-28 rounded-full bg-[#0d5bd7]/0 blur-3xl transition-all duration-500 group-hover:bg-[#0d5bd7]/15" />
 
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#d83b32]/10 text-[#d83b32] transition-all duration-300 group-hover:bg-[#d83b32] group-hover:text-white">
+        <div className="relative flex items-center gap-4">
+          {/* Icon */}
+
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#102f57] text-[#8db8e8] transition-all duration-300 group-hover:bg-[#d83b32] group-hover:text-white group-hover:shadow-[0_8px_25px_rgba(216,59,50,0.25)]">
             {item.icon}
           </div>
 
-
           <div>
+            {/* Title */}
 
-            <h3 className="text-base font-extrabold capitalize text-[#24272d]">
+            <h3 className="text-base font-extrabold capitalize text-white">
               {item.title}
             </h3>
 
+            {/* Accent */}
+
             <div className="mt-2 h-1 w-7 rounded-full bg-[#d83b32] transition-all duration-300 group-hover:w-12" />
-
           </div>
-
         </div>
 
+        {/* Description */}
 
-        <p className="mt-4 text-sm leading-6 text-gray-600">
+        <p className="relative mt-4 text-sm leading-6 text-blue-100/55">
           {item.description}
         </p>
 
-      </div>
+        {/* Bottom Hover Line */}
 
+        <div className="absolute bottom-0 left-0 h-[2px] w-0 bg-[#d83b32] transition-all duration-500 group-hover:w-full" />
+      </div>
     </motion.div>
   );
-  
-  
 }

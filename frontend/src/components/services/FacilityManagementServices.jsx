@@ -21,7 +21,10 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
-// Apne actual filenames ke according names change kar dena
+// =====================================================
+// MANUAL IMAGE IMPORTS
+// =====================================================
+
 import facility1 from "../../assets/services/FacilityManagement/facility-1.jpg";
 import facility2 from "../../assets/services/FacilityManagement/facility-2.jpg";
 import facility3 from "../../assets/services/FacilityManagement/facility-3.jpg";
@@ -158,14 +161,31 @@ export default function FacilityManagementServices() {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-white px-5 py-20 sm:px-8 lg:px-12 lg:py-24">
-      {/* Decorative background */}
-      <div className="pointer-events-none absolute -left-40 top-20 h-96 w-96 rounded-full bg-white blur-3xl" />
+    <section className="relative overflow-hidden bg-[#06152e] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-24">
+      {/* =====================================================
+          PREMIUM DARK BLUE BACKGROUND
+          NO GRID
+      ====================================================== */}
 
-      <div className="pointer-events-none absolute -right-40 bottom-10 h-96 w-96 rounded-full bg-white blur-3xl" />
+      {/* Top Left Blue Glow */}
+      <div className="pointer-events-none absolute -left-48 -top-40 h-[550px] w-[550px] rounded-full bg-[#0d5bd7]/15 blur-[130px]" />
+
+      {/* Top Right Blue Glow */}
+      <div className="pointer-events-none absolute -right-48 top-20 h-[550px] w-[550px] rounded-full bg-[#1466c8]/15 blur-[130px]" />
+
+      {/* Bottom Left Blue Glow */}
+      <div className="pointer-events-none absolute -bottom-48 -left-40 h-[500px] w-[500px] rounded-full bg-[#123e78]/20 blur-[130px]" />
+
+      {/* Bottom Right Red Glow */}
+      <div className="pointer-events-none absolute -bottom-40 -right-40 h-[450px] w-[450px] rounded-full bg-[#d83b32]/5 blur-[130px]" />
+
+      {/* Center Blue Glow */}
+      <div className="pointer-events-none absolute left-[40%] top-[35%] h-[350px] w-[350px] rounded-full bg-[#0d5bd7]/8 blur-[120px]" />
 
       <div className="relative mx-auto max-w-7xl">
-        {/* ================= HEADER ================= */}
+        {/* =====================================================
+            HEADER
+        ====================================================== */}
 
         <motion.div
           initial={{ opacity: 0, y: 35 }}
@@ -177,28 +197,32 @@ export default function FacilityManagementServices() {
           <div className="inline-flex items-center gap-3">
             <span className="h-[2px] w-10 bg-[#d83b32]" />
 
-            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#d83b32]">
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#ef6359]">
               Integrated Solutions
             </span>
 
             <span className="h-[2px] w-10 bg-[#d83b32]" />
           </div>
 
-          <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-[#24272d] sm:text-5xl lg:text-6xl">
-            Facility Management <span className="text-[#d83b32]">Services</span>
+          <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Facility Management <span className="text-[#ef6359]">Services</span>
           </h1>
 
-          <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-gray-600 sm:text-lg">
+          <p className="mx-auto mt-5 max-w-3xl text-base leading-8 text-blue-100/65 sm:text-lg">
             Comprehensive facility management solutions designed to keep
             workplaces, commercial spaces and managed facilities efficient,
             clean, safe and operational.
           </p>
         </motion.div>
 
-        {/* ================= MAIN CONTENT ================= */}
+        {/* =====================================================
+            MAIN CONTENT
+        ====================================================== */}
 
         <div className="mt-14 grid gap-10 lg:grid-cols-[1.05fr_0.95fr]">
-          {/* ================= SERVICES ================= */}
+          {/* =====================================================
+              SERVICES
+          ====================================================== */}
 
           <div className="space-y-6">
             {categories.map((category, categoryIndex) => (
@@ -220,12 +244,20 @@ export default function FacilityManagementServices() {
                   duration: 0.6,
                   delay: categoryIndex * 0.1,
                 }}
-                className="group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:border-[#d83b32]/40 hover:shadow-xl"
+                className="group relative overflow-hidden rounded-3xl border border-blue-200/10 bg-[#0b2344]/80 shadow-[0_18px_55px_rgba(0,0,0,0.25)] backdrop-blur-xl transition-all duration-300 hover:border-[#d83b32]/40 hover:shadow-[0_22px_65px_rgba(0,0,0,0.35)]"
               >
-                {/* Category Header */}
+                {/* Card Glow */}
+                <div className="pointer-events-none absolute -right-20 -top-20 h-48 w-48 rounded-full bg-[#0d5bd7]/0 blur-[70px] transition-all duration-500 group-hover:bg-[#0d5bd7]/15" />
 
-                <div className="flex items-center gap-4 bg-[#192235] px-6 py-5 text-white">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#d83b32]">
+                {/* Red Glow */}
+                <div className="pointer-events-none absolute -bottom-20 -left-20 h-40 w-40 rounded-full bg-[#d83b32]/0 blur-[70px] transition-all duration-500 group-hover:bg-[#d83b32]/5" />
+
+                {/* =====================================================
+                    CATEGORY HEADER
+                ====================================================== */}
+
+                <div className="relative flex items-center gap-4 bg-gradient-to-r from-[#102f57] to-[#0c2444] px-6 py-5 text-white">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#d83b32] shadow-[0_8px_25px_rgba(216,59,50,0.25)] transition-transform duration-300 group-hover:scale-105">
                     {React.cloneElement(category.icon, {
                       size: 24,
                     })}
@@ -242,27 +274,39 @@ export default function FacilityManagementServices() {
                   </div>
                 </div>
 
-                {/* Items */}
+                {/* =====================================================
+                    ITEMS
+                ====================================================== */}
 
-                <div className="grid gap-2 p-5 sm:grid-cols-2">
+                <div className="relative grid gap-2 p-5 sm:grid-cols-2">
                   {category.items.map((item, index) => (
                     <motion.div
                       key={item.text}
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
+                      initial={{
+                        opacity: 0,
+                        y: 10,
+                      }}
+                      whileInView={{
+                        opacity: 1,
+                        y: 0,
+                      }}
+                      viewport={{
+                        once: true,
+                      }}
                       transition={{
                         delay: index * 0.04,
                       }}
-                      className="group/item flex items-start gap-3 rounded-xl border border-transparent px-3 py-3 transition-all duration-300 hover:border-[#d83b32]/20 hover:bg-[#fdf0ee]"
+                      className="group/item flex items-start gap-3 rounded-xl border border-transparent px-3 py-3 transition-all duration-300 hover:border-[#d83b32]/25 hover:bg-[#102f57]"
                     >
-                      <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#fdf0ee] text-[#d83b32] transition-all duration-300 group-hover/item:bg-[#d83b32] group-hover/item:text-white">
+                      {/* Icon */}
+                      <div className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#102f57] text-[#8db8e8] transition-all duration-300 group-hover/item:bg-[#d83b32] group-hover/item:text-white">
                         {React.cloneElement(item.icon, {
                           size: 16,
                         })}
                       </div>
 
-                      <p className="text-sm font-semibold leading-6 text-gray-700">
+                      {/* Text */}
+                      <p className="text-sm font-semibold leading-6 text-blue-100/75 transition-colors duration-300 group-hover/item:text-white">
                         {item.text}
                       </p>
                     </motion.div>
@@ -272,17 +316,38 @@ export default function FacilityManagementServices() {
             ))}
           </div>
 
-          {/* ================= IMAGE GALLERY ================= */}
+          {/* =====================================================
+              IMAGE GALLERY
+          ====================================================== */}
 
           <motion.div
-            initial={{ opacity: 0, x: 45 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            initial={{
+              opacity: 0,
+              x: 45,
+            }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.8,
+            }}
             className="lg:sticky lg:top-24 lg:self-start"
           >
-            <div className="rounded-3xl bg-[#192235] p-4 shadow-2xl sm:p-5">
-              <div className="mb-5 flex items-center justify-between px-2">
+            <div className="relative overflow-hidden rounded-3xl border border-blue-200/10 bg-gradient-to-br from-[#102f57] via-[#0b2344] to-[#071a35] p-4 shadow-[0_25px_75px_rgba(0,0,0,0.35)] sm:p-5">
+              {/* Gallery Glow */}
+              <div className="pointer-events-none absolute -right-32 -top-32 h-72 w-72 rounded-full bg-[#0d5bd7]/15 blur-[100px]" />
+
+              <div className="pointer-events-none absolute -bottom-32 -left-32 h-72 w-72 rounded-full bg-[#d83b32]/5 blur-[100px]" />
+
+              {/* =====================================================
+                  GALLERY HEADER
+              ====================================================== */}
+
+              <div className="relative mb-5 flex items-center justify-between px-2">
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.2em] text-[#ef6359]">
                     Our Expertise
@@ -293,14 +358,16 @@ export default function FacilityManagementServices() {
                   </h2>
                 </div>
 
-                <div className="hidden h-11 w-11 items-center justify-center rounded-xl bg-[#d83b32] sm:flex">
+                <div className="hidden h-11 w-11 items-center justify-center rounded-xl bg-[#d83b32] shadow-[0_8px_25px_rgba(216,59,50,0.25)] sm:flex">
                   <Building2 size={22} className="text-white" />
                 </div>
               </div>
 
-              {/* Masonry-like Gallery */}
+              {/* =====================================================
+                  IMAGE GALLERY
+              ====================================================== */}
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="relative grid grid-cols-2 gap-3">
                 {images.map((image, index) => (
                   <motion.div
                     key={image}
@@ -322,7 +389,7 @@ export default function FacilityManagementServices() {
                     whileHover={{
                       scale: 1.03,
                     }}
-                    className={`group relative overflow-hidden rounded-2xl ${
+                    className={`group relative overflow-hidden rounded-2xl border border-white/10 ${
                       index === 0 || index === 3 ? "h-64" : "h-48"
                     }`}
                   >
@@ -332,17 +399,30 @@ export default function FacilityManagementServices() {
                       className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
                     />
 
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#192235]/70 via-transparent to-transparent opacity-0 transition duration-300 group-hover:opacity-100" />
+                    {/* Dark Image Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#06152e]/80 via-[#06152e]/10 to-transparent opacity-70 transition duration-300 group-hover:opacity-100" />
+
+                    {/* Red Hover Border */}
+                    <div className="absolute inset-0 rounded-2xl border border-transparent transition-all duration-300 group-hover:border-[#d83b32]/60" />
+
+                    {/* Hover Label */}
+                    <div className="absolute bottom-4 left-4 translate-y-3 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                      <p className="text-xs font-bold uppercase tracking-[0.18em] text-white">
+                        Facility Services
+                      </p>
+                    </div>
                   </motion.div>
                 ))}
               </div>
 
-              {/* Bottom info */}
+              {/* =====================================================
+                  BOTTOM INFO
+              ====================================================== */}
 
-              <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 p-5">
+              <div className="relative mt-4 rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-sm">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#d83b32]">
-                    <CheckCircle2 size={20} />
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#d83b32] shadow-[0_8px_25px_rgba(216,59,50,0.2)]">
+                    <CheckCircle2 size={20} className="text-white" />
                   </div>
 
                   <div>
@@ -350,7 +430,7 @@ export default function FacilityManagementServices() {
                       Integrated Facility Support
                     </p>
 
-                    <p className="mt-1 text-xs leading-5 text-gray-400">
+                    <p className="mt-1 text-xs leading-5 text-blue-100/45">
                       Housekeeping, technical, business support and mall
                       management services.
                     </p>
@@ -361,25 +441,48 @@ export default function FacilityManagementServices() {
           </motion.div>
         </div>
 
-        {/* ================= BOTTOM SUMMARY ================= */}
+        {/* =====================================================
+            BOTTOM SUMMARY
+        ====================================================== */}
 
         <motion.div
-          initial={{ opacity: 0, y: 25 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mt-12 rounded-3xl border border-[#d83b32]/20 bg-[#fdf0ee] px-7 py-8 text-center sm:px-12"
+          initial={{
+            opacity: 0,
+            y: 25,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          className="relative mt-12 overflow-hidden rounded-3xl border border-blue-200/10 bg-gradient-to-r from-[#0b2344] via-[#102f57] to-[#0b2344] px-7 py-9 text-center shadow-[0_20px_60px_rgba(0,0,0,0.3)] sm:px-12"
         >
-          <p className="text-xl font-extrabold text-[#24272d] sm:text-2xl">
-            One Facility.{" "}
-            <span className="text-[#d83b32]">Complete Management.</span>
-          </p>
+          {/* Summary Glow */}
+          <div className="pointer-events-none absolute left-1/2 top-0 h-32 w-[500px] -translate-x-1/2 rounded-full bg-[#d83b32]/8 blur-[80px]" />
 
-          <p className="mx-auto mt-3 max-w-3xl text-sm leading-7 text-gray-600">
-            From housekeeping and business support to technical operations and
-            mall management, our integrated services help maintain efficient and
-            well-managed facilities.
-          </p>
+          <div className="relative">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#d83b32] shadow-[0_10px_30px_rgba(216,59,50,0.25)]">
+              <Building2 size={27} className="text-white" />
+            </div>
+
+            <p className="mt-5 text-2xl font-extrabold text-white sm:text-3xl">
+              One Facility.{" "}
+              <span className="text-[#ef6359]">Complete Management.</span>
+            </p>
+
+            <p className="mx-auto mt-3 max-w-3xl text-sm leading-7 text-blue-100/55">
+              From housekeeping and business support to technical operations and
+              mall management, our integrated services help maintain efficient
+              and well-managed facilities.
+            </p>
+
+            <div className="mx-auto mt-6 h-1 w-16 rounded-full bg-[#d83b32]" />
+          </div>
         </motion.div>
       </div>
     </section>

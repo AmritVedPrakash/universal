@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-// Replace these names according to your actual files inside assets/ourclient
 import amrapali from "../assets/ourclient/amrapali.png";
 import idbi from "../assets/ourclient/idbi.png";
 import adityaBirla from "../assets/ourclient/adityabirla.png";
@@ -32,12 +31,48 @@ const clients = [
 
 export default function OurClients() {
   return (
-    <section className="overflow-hidden bg-white py-20">
+    <section
+      className="
+    relative
+    overflow-hidden
+    bg-[#0b172a]
+    py-20
+    "
+    >
+      {/* Background Glow */}
+
+      <div
+        className="
+      absolute
+      -left-40
+      top-0
+      h-96
+      w-96
+      rounded-full
+      bg-blue-500/10
+      blur-3xl
+      "
+      />
+
+      <div
+        className="
+      absolute
+      -right-40
+      bottom-0
+      h-96
+      w-96
+      rounded-full
+      bg-red-500/10
+      blur-3xl
+      "
+      />
+
       {/* Heading */}
+
       <motion.div
         initial={{
           opacity: 0,
-          y: -30,
+          y: -40,
         }}
         whileInView={{
           opacity: 1,
@@ -49,26 +84,73 @@ export default function OurClients() {
         transition={{
           duration: 0.6,
         }}
-        className="mb-14 text-center"
+        className="
+        relative
+        mb-14
+        text-center
+        "
       >
-        <h2
+        <p
           className="
-          text-4xl
-          md:text-5xl
-          font-bold
-          tracking-wide
-          text-[#24272d]
+        text-sm
+        font-bold
+        uppercase
+        tracking-[0.25em]
+        text-red-400
         "
         >
-          Our Clients
+          Trusted Partners
+        </p>
+
+        <h2
+          className="
+        mt-4
+        text-4xl
+        font-extrabold
+        tracking-wide
+        text-white
+        md:text-5xl
+        "
+        >
+          Our
+          <span className="text-red-400"> Clients</span>
         </h2>
 
-        <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-[#d83b32]" />
+        <div
+          className="
+        mx-auto
+        mt-5
+        h-1
+        w-16
+        rounded-full
+        bg-red-500
+        "
+        />
+
+        <p
+          className="
+        mx-auto
+        mt-5
+        max-w-2xl
+        text-gray-300
+        "
+        >
+          Trusted by leading organizations for professional security and
+          operational excellence.
+        </p>
       </motion.div>
 
       {/* Slider */}
-      <div className="relative w-full overflow-hidden">
+
+      <div
+        className="
+      relative
+      w-full
+      overflow-hidden
+      "
+      >
         {/* Left Fade */}
+
         <div
           className="
           absolute
@@ -76,26 +158,26 @@ export default function OurClients() {
           top-0
           z-10
           h-full
-          w-24
+          w-32
           bg-gradient-to-r
-          from-white
+          from-[#0b172a]
           to-transparent
-        "
+          "
         />
 
         <motion.div
           className="
-            flex
-            w-max
-            items-center
-            gap-20
+          flex
+          w-max
+          items-center
+          gap-8
           "
           animate={{
             x: ["0%", "-50%"],
           }}
           transition={{
             repeat: Infinity,
-            duration: 30,
+            duration: 35,
             ease: "linear",
           }}
         >
@@ -103,26 +185,33 @@ export default function OurClients() {
             <motion.div
               key={index}
               whileHover={{
-                scale: 1.08,
+                y: -8,
+                scale: 1.05,
               }}
               transition={{
                 duration: 0.3,
               }}
               className="
-                flex
-                h-[110px]
-                w-[190px]
-                items-center
-                justify-center
+              flex
+              h-[130px]
+              w-[220px]
+              items-center
+              justify-center
+              rounded-2xl
+              border
+              border-white/10
+              bg-white
+              p-6
+              shadow-xl
               "
             >
               <img
                 src={logo}
-                alt="Our Client"
+                alt="Client Logo"
                 className="
-                  max-h-full
-                  max-w-full
-                  object-contain
+                max-h-full
+                max-w-full
+                object-contain
                 "
               />
             </motion.div>
@@ -130,6 +219,7 @@ export default function OurClients() {
         </motion.div>
 
         {/* Right Fade */}
+
         <div
           className="
           absolute
@@ -137,11 +227,11 @@ export default function OurClients() {
           top-0
           z-10
           h-full
-          w-24
+          w-32
           bg-gradient-to-l
-          from-white
+          from-[#0b172a]
           to-transparent
-        "
+          "
         />
       </div>
     </section>

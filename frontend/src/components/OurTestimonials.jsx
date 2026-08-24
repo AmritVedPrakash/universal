@@ -37,38 +37,138 @@ const testimonials = [
 
 export default function OurTestimonials() {
   return (
-    <section className="relative overflow-hidden bg-white px-5 py-20 sm:py-24">
-      {/* Background decoration */}
-      <div className="pointer-events-none absolute left-[-120px] top-20 h-64 w-64 rounded-full bg-red-100/50 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-0 right-[-100px] h-72 w-72 rounded-full bg-red-50 blur-3xl" />
+    <section
+      className="
+    relative
+    overflow-hidden
+    bg-[#081426]
+    px-5
+    py-20
+    sm:px-8
+    sm:py-24
+    lg:px-12
+    "
+    >
+      {/* Background Glow */}
 
-      <div className="relative mx-auto max-w-[1350px]">
+      <div
+        className="
+      pointer-events-none
+      absolute
+      -left-40
+      top-20
+      h-96
+      w-96
+      rounded-full
+      bg-blue-500/10
+      blur-3xl
+      "
+      />
+
+      <div
+        className="
+      pointer-events-none
+      absolute
+      -right-40
+      bottom-0
+      h-96
+      w-96
+      rounded-full
+      bg-red-500/10
+      blur-3xl
+      "
+      />
+
+      <div
+        className="
+      relative
+      mx-auto
+      max-w-[1350px]
+      "
+      >
         {/* Heading */}
+
         <motion.div
-          initial={{ opacity: 0, y: 35 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mb-14 text-center"
+          initial={{
+            opacity: 0,
+            y: 35,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.7,
+          }}
+          className="
+        mb-14
+        text-center
+        "
         >
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.3em] text-[#d83b32]">
+          <p
+            className="
+          mb-3
+          text-sm
+          font-bold
+          uppercase
+          tracking-[0.3em]
+          text-red-400
+          "
+          >
             Client Reviews
           </p>
 
-          <h2 className="text-4xl font-bold tracking-tight text-[#20232a] sm:text-5xl">
-            Our <span className="text-[#d83b32]">Testimonials</span>
+          <h2
+            className="
+          text-4xl
+          font-extrabold
+          tracking-tight
+          text-white
+          sm:text-5xl
+          "
+          >
+            Our
+            <span className="text-red-400">Testimonials</span>
           </h2>
 
-          <div className="mx-auto mt-5 h-1 w-16 rounded-full bg-[#d83b32]" />
+          <div
+            className="
+          mx-auto
+          mt-5
+          h-1
+          w-16
+          rounded-full
+          bg-red-500
+          "
+          />
 
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-gray-600">
+          <p
+            className="
+          mx-auto
+          mt-5
+          max-w-2xl
+          leading-7
+          text-gray-300
+          "
+          >
             Trusted by businesses and organizations for professional, reliable
             and highly trained security services.
           </p>
         </motion.div>
 
         {/* Cards */}
-        <div className="grid gap-7 md:grid-cols-2 xl:grid-cols-3">
+
+        <div
+          className="
+        grid
+        gap-7
+        md:grid-cols-2
+        xl:grid-cols-3
+        "
+        >
           {testimonials.map((item, index) => (
             <motion.article
               key={item.name}
@@ -91,54 +191,168 @@ export default function OurTestimonials() {
               whileHover={{
                 y: -10,
               }}
-              className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-7 shadow-[0_8px_30px_rgba(0,0,0,0.07)] transition-shadow duration-300 hover:shadow-[0_18px_45px_rgba(216,59,50,0.15)]"
+              className="
+          group
+          relative
+          overflow-hidden
+          rounded-3xl
+          border
+          border-white/10
+          bg-[#102238]
+          p-7
+          shadow-2xl
+          transition
+          "
             >
-              {/* Red top line */}
-              <div className="absolute left-0 right-0 top-0 h-1 bg-[#d83b32]" />
+              {/* Top Line */}
+
+              <div
+                className="
+            absolute
+            left-0
+            right-0
+            top-0
+            h-1
+            bg-red-500
+            "
+              />
 
               {/* Quote */}
-              <div className="absolute right-6 top-5 opacity-10 transition-all duration-300 group-hover:scale-110 group-hover:opacity-20">
-                <Quote size={65} className="text-[#d83b32]" />
+
+              <div
+                className="
+            absolute
+            right-6
+            top-5
+            opacity-10
+            transition
+            duration-300
+            group-hover:scale-110
+            group-hover:opacity-20
+            "
+              >
+                <Quote size={65} className="text-red-400" />
               </div>
 
               {/* Stars */}
-              <div className="mb-6 flex gap-1">
+
+              <div
+                className="
+            mb-6
+            flex
+            gap-1
+            "
+              >
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star
                     key={star}
                     size={17}
-                    className="fill-[#d83b32] text-[#d83b32]"
+                    className="
+              fill-red-500
+              text-red-500
+              "
                   />
                 ))}
               </div>
 
               {/* Client */}
-              <div className="relative mb-6 flex items-center gap-4">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[#d83b32] text-lg font-bold text-white shadow-md">
+
+              <div
+                className="
+            relative
+            mb-6
+            flex
+            items-center
+            gap-4
+            "
+              >
+                <div
+                  className="
+              flex
+              h-14
+              w-14
+              shrink-0
+              items-center
+              justify-center
+              rounded-xl
+              bg-red-500
+              text-lg
+              font-bold
+              text-white
+              shadow-lg
+              "
+                >
                   {item.name.charAt(0)}
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-bold text-[#20232a]">
+                  <h3
+                    className="
+                text-xl
+                font-bold
+                text-white
+                "
+                  >
                     {item.name}
                   </h3>
 
-                  <p className="mt-1 text-sm font-medium text-[#d83b32]">
+                  <p
+                    className="
+                mt-1
+                text-sm
+                font-medium
+                text-red-400
+                "
+                  >
                     {item.subtitle}
                   </p>
                 </div>
               </div>
 
-              {/* Testimonial */}
-              <p className="relative text-[15px] leading-7 text-gray-600">
+              {/* Text */}
+
+              <p
+                className="
+            relative
+            text-[15px]
+            leading-7
+            text-gray-300
+            "
+              >
                 “{item.text}”
               </p>
 
-              {/* Bottom accent */}
-              <div className="mt-7 flex items-center justify-between">
-                <span className="h-[2px] w-12 rounded-full bg-[#d83b32] transition-all duration-300 group-hover:w-20" />
+              {/* Bottom */}
 
-                <span className="text-xs font-semibold uppercase tracking-widest text-gray-400">
+              <div
+                className="
+            mt-7
+            flex
+            items-center
+            justify-between
+            "
+              >
+                <span
+                  className="
+              h-[2px]
+              w-12
+              rounded-full
+              bg-red-500
+              transition-all
+              duration-300
+              group-hover:w-20
+              "
+                />
+
+                <span
+                  className="
+              text-xs
+              font-semibold
+              uppercase
+              tracking-widest
+              text-gray-400
+              "
+                >
                   Verified Client
                 </span>
               </div>

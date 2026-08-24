@@ -2,114 +2,301 @@ import React from "react";
 import { motion } from "framer-motion";
 import {
   ShieldCheck,
-  RefreshCw,
-  TrendingUp,
-  Settings2,
-  ArrowRight,
-  GraduationCap,
+  Cpu,
+  CalendarDays,
+  UserRoundCheck,
+  Building2,
+  Route,
+  Car,
+  WalletCards,
+  Dog,
+  RadioTower,
+  Users,
+  SearchCheck,
+  Fingerprint,
+  MessageSquareText,
+  Hotel,
+  Utensils,
+  Banknote,
 } from "lucide-react";
 
-import trainingImage1 from "../../assets/quality/training-1.jpg";
-import trainingImage2 from "../../assets/quality/training-2.jpg";
-import trainingImage3 from "../../assets/quality/training-3.jpg";
-
-export default function Trainings() {
-  const trainingPrograms = [
+export default function ScopeOfService() {
+  const services = [
     {
-      number: "01",
-      title: "Basic",
-      icon: <ShieldCheck size={25} />,
-      shortText: "Foundation Training",
-      description:
-        "Initial training including Disaster Management, First Aid, Security drill procedures, use of hand held metal detectors, general frisking, fire fighting and general etiquette.",
-      image: trainingImage1,
+      title: "Manned Guarding",
+      icon: <ShieldCheck />,
     },
-
     {
-      number: "02",
-      title: "Refresher",
-      icon: <RefreshCw size={25} />,
-      shortText: "Role & Responsibility",
-      description:
-        "Briefing and refreshing employees about their roles, responsibilities and duties before the beginning of every shift.",
-      image: trainingImage2,
+      title: "Security Technology and Equipment",
+      icon: <Cpu />,
     },
-
     {
-      number: "03",
-      title: "Continual",
-      icon: <TrendingUp size={25} />,
-      shortText: "Continuous Development",
-      description:
-        "Regular training programs to enhance job specific knowledge, improve skills and develop employees for future responsibilities.",
-      image: trainingImage3,
+      title: "Event Management",
+      icon: <CalendarDays />,
     },
-
     {
-      number: "04",
-      title: "Customised",
-      icon: <Settings2 size={25} />,
-      shortText: "Site Specific Training",
-      description:
-        "Special training according to the nature of job including Industrial, Hospitality, Residential, BPO sectors and specific equipment handling.",
-      image: trainingImage1,
+      title: "Executive Protection & Specialised Protective Services",
+      icon: <UserRoundCheck />,
+    },
+    {
+      title: "Facility and Housekeeping Services",
+      icon: <Building2 />,
+    },
+    {
+      title: "Tolls and Highway Management",
+      icon: <Route />,
+    },
+    {
+      title: "Parking Management",
+      icon: <Car />,
+    },
+    {
+      title: "Cash Management Services",
+      icon: <WalletCards />,
+    },
+    {
+      title: "Canine Squads",
+      icon: <Dog />,
+    },
+    {
+      title: "Telecom Tower Construction and Management",
+      icon: <RadioTower />,
+    },
+    {
+      title: "Manpower Outsourcing",
+      icon: <Users />,
+    },
+    {
+      title: "Background Checks Division",
+      icon: <SearchCheck />,
+    },
+    {
+      title: "Detective/Investigation Services",
+      icon: <Fingerprint />,
+    },
+    {
+      title: "Consultancy Services",
+      icon: <MessageSquareText />,
+    },
+    {
+      title: "Dormitory Management/ Hotel Management",
+      icon: <Hotel />,
+    },
+    {
+      title: "Canteen Management",
+      icon: <Utensils />,
+    },
+    {
+      title: "Payroll Management",
+      icon: <Banknote />,
     },
   ];
 
   return (
-    <section
-      className="
-    relative
-    overflow-hidden
-    bg-white
-    px-5
-    py-20
-    sm:px-8
-    lg:px-12
-    lg:py-24
-    "
-    >
-      {/* Background */}
+    <section className="relative overflow-hidden bg-[#06152e] px-5 py-20 text-white sm:px-8 lg:px-12 lg:py-24">
+      {/* =====================================================
+          PREMIUM DARK BLUE BACKGROUND
+          NO GRID / NO PATTERN
+      ====================================================== */}
 
-      <div
-        className="
-      absolute
-      -left-40
-      top-20
-      h-96
-      w-96
-      rounded-full
-      bg-[#d83b32]/5
-      blur-3xl
-      "
-      />
+      {/* Top Left Glow */}
+      <div className="pointer-events-none absolute -left-52 -top-44 h-[600px] w-[600px] rounded-full bg-[#0d5bd7]/15 blur-[140px]" />
 
-      <div
-        className="
-      absolute
-      -right-40
-      bottom-20
-      h-96
-      w-96
-      rounded-full
-      bg-[#192235]/5
-      blur-3xl
-      "
-      />
+      {/* Top Right Glow */}
+      <div className="pointer-events-none absolute -right-52 -top-20 h-[600px] w-[600px] rounded-full bg-[#1557a6]/15 blur-[140px]" />
 
-      <div
-        className="
-      relative
-      mx-auto
-      max-w-[1350px]
-      "
-      >
-        {/* HEADER */}
+      {/* Bottom Left Glow */}
+      <div className="pointer-events-none absolute -bottom-52 -left-44 h-[600px] w-[600px] rounded-full bg-[#0d5bd7]/10 blur-[140px]" />
+
+      {/* Bottom Right Red Glow */}
+      <div className="pointer-events-none absolute -bottom-48 -right-48 h-[500px] w-[500px] rounded-full bg-[#d83b32]/5 blur-[140px]" />
+
+      {/* Center Glow */}
+      <div className="pointer-events-none absolute left-1/2 top-[42%] h-[450px] w-[450px] -translate-x-1/2 rounded-full bg-[#0d5bd7]/7 blur-[130px]" />
+
+      <div className="relative mx-auto max-w-7xl">
+        {/* =====================================================
+            HEADER
+        ====================================================== */}
+
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="mx-auto max-w-3xl text-center"
+        >
+          {/* Label */}
+
+          <div className="inline-flex items-center gap-3">
+            <span className="h-[2px] w-10 bg-[#d83b32]" />
+
+            <span className="text-sm font-bold uppercase tracking-[0.2em] text-[#ef6359]">
+              What We Offer
+            </span>
+
+            <span className="h-[2px] w-10 bg-[#d83b32]" />
+          </div>
+
+          {/* Heading */}
+
+          <h1 className="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+            Scope of <span className="text-[#ef6359]">Services</span>
+          </h1>
+
+          {/* Description */}
+
+          <p className="mt-5 text-base leading-8 text-blue-100/65 sm:text-lg">
+            We offer a wide spectrum of professional services designed to
+            provide comprehensive security, management and operational
+            solutions.
+          </p>
+        </motion.div>
+
+        {/* =====================================================
+            INTRO CARD
+        ====================================================== */}
 
         <motion.div
           initial={{
             opacity: 0,
-            y: 40,
+            scale: 0.96,
+          }}
+          whileInView={{
+            opacity: 1,
+            scale: 1,
+          }}
+          viewport={{
+            once: true,
+          }}
+          transition={{
+            duration: 0.6,
+          }}
+          className="group relative mx-auto mt-12 max-w-5xl overflow-hidden rounded-3xl border border-blue-200/10 bg-gradient-to-br from-[#102f57] via-[#0b2344] to-[#081b35] px-7 py-9 text-center shadow-[0_25px_75px_rgba(0,0,0,0.35)] sm:px-12"
+        >
+          {/* Blue Glow */}
+
+          <div className="pointer-events-none absolute -right-28 -top-28 h-72 w-72 rounded-full bg-[#0d5bd7]/15 blur-[100px]" />
+
+          {/* Red Glow */}
+
+          <div className="pointer-events-none absolute -bottom-28 -left-28 h-64 w-64 rounded-full bg-[#d83b32]/5 blur-[90px]" />
+
+          <div className="relative">
+            {/* Icon */}
+
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#d83b32] text-white shadow-[0_10px_35px_rgba(216,59,50,0.25)] transition-transform duration-300 group-hover:scale-105">
+              <ShieldCheck size={29} />
+            </div>
+
+            {/* Heading */}
+
+            <h2 className="mt-5 text-2xl font-extrabold text-white sm:text-3xl">
+              Comprehensive Security & Management Solutions
+            </h2>
+
+            {/* Description */}
+
+            <p className="mx-auto mt-3 max-w-3xl leading-7 text-blue-100/60">
+              From trained security personnel and technology solutions to
+              facility management, manpower and specialised services, our
+              solutions cover diverse operational requirements.
+            </p>
+
+            {/* Accent */}
+
+            <div className="mx-auto mt-6 h-1 w-14 rounded-full bg-[#d83b32]" />
+          </div>
+        </motion.div>
+
+        {/* =====================================================
+            SERVICES
+        ====================================================== */}
+
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, index) => (
+            <motion.div
+              key={service.title}
+              initial={{
+                opacity: 0,
+                y: 35,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.15,
+              }}
+              transition={{
+                duration: 0.5,
+                delay: (index % 6) * 0.06,
+              }}
+              whileHover={{
+                y: -8,
+              }}
+              className="group relative overflow-hidden rounded-2xl border border-blue-200/10 bg-[#0b2344]/85 p-6 shadow-[0_15px_45px_rgba(0,0,0,0.25)] backdrop-blur-xl transition-all duration-300 hover:border-[#d83b32]/40 hover:bg-[#102b50] hover:shadow-[0_22px_60px_rgba(0,0,0,0.4)]"
+            >
+              {/* =================================================
+                  CARD GLOW
+              ================================================== */}
+
+              <div className="pointer-events-none absolute -right-14 -top-14 h-36 w-36 rounded-full bg-[#0d5bd7]/0 blur-3xl transition-all duration-500 group-hover:bg-[#0d5bd7]/15" />
+
+              <div className="pointer-events-none absolute -bottom-12 -left-12 h-32 w-32 rounded-full bg-[#d83b32]/0 blur-3xl transition-all duration-500 group-hover:bg-[#d83b32]/5" />
+
+              {/* =================================================
+                  NUMBER
+              ================================================== */}
+
+              <span className="absolute -right-2 -top-5 text-[82px] font-black leading-none text-white/[0.035] transition-all duration-300 group-hover:text-[#d83b32]/10">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+
+              <div className="relative">
+                {/* =================================================
+                    ICON
+                ================================================== */}
+
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#102f57] text-[#8db8e8] transition-all duration-300 group-hover:bg-[#d83b32] group-hover:text-white group-hover:shadow-[0_8px_25px_rgba(216,59,50,0.25)]">
+                  {React.cloneElement(service.icon, {
+                    size: 23,
+                  })}
+                </div>
+
+                {/* =================================================
+                    TITLE
+                ================================================== */}
+
+                <h3 className="mt-6 min-h-[56px] text-lg font-extrabold leading-7 text-white">
+                  {service.title}
+                </h3>
+
+                {/* =================================================
+                    ACCENT
+                ================================================== */}
+
+                <div className="mt-5 h-1 w-8 rounded-full bg-[#d83b32] transition-all duration-300 group-hover:w-16" />
+              </div>
+
+              {/* =================================================
+                  BOTTOM HOVER LINE
+              ================================================== */}
+
+              <div className="absolute bottom-0 left-0 h-1 w-0 bg-[#d83b32] transition-all duration-500 group-hover:w-full" />
+            </motion.div>
+          ))}
+        </div>
+
+        {/* =====================================================
+            SERVICE COUNT
+        ====================================================== */}
+
+        <motion.div
+          initial={{
+            opacity: 0,
+            y: 25,
           }}
           whileInView={{
             opacity: 1,
@@ -119,78 +306,36 @@ export default function Trainings() {
             once: true,
           }}
           transition={{
-            duration: 0.7,
+            duration: 0.6,
           }}
-          className="text-center"
+          className="relative mt-12 overflow-hidden rounded-2xl border border-blue-200/10 bg-gradient-to-r from-[#0b2344] via-[#102f57] to-[#0b2344] px-6 py-7 text-center shadow-[0_18px_55px_rgba(0,0,0,0.3)]"
         >
-          <div
-            className="
-          flex
-          justify-center
-          items-center
-          gap-4
-          "
-          >
-            <span
-              className="
-            h-[2px]
-            w-12
-            bg-[#d83b32]
-            "
-            />
+          {/* Glow */}
 
-            <p
-              className="
-            text-sm
-            font-bold
-            uppercase
-            tracking-[0.25em]
-            text-[#d83b32]
-            "
-            >
-              Professional Training
-            </p>
+          <div className="pointer-events-none absolute left-1/2 top-0 h-24 w-[450px] -translate-x-1/2 rounded-full bg-[#d83b32]/8 blur-[70px]" />
 
-            <span
-              className="
-            h-[2px]
-            w-12
-            bg-[#d83b32]
-            "
-            />
+          <div className="relative flex flex-col items-center justify-center gap-3 sm:flex-row">
+            {/* Count */}
+
+            <span className="text-4xl font-black text-[#ef6359]">
+              {services.length}+
+            </span>
+
+            {/* Text */}
+
+            <span className="font-semibold text-blue-100/75">
+              Professional Services Across Multiple Operational Domains
+            </span>
           </div>
 
-          <h1
-            className="
-          mt-5
-          text-4xl
-          font-extrabold
-          text-[#24272d]
-          sm:text-5xl
-          lg:text-6xl
-          "
-          >
-            Security
-            <span className="text-[#d83b32]"> Training</span>
-          </h1>
+          {/* Accent */}
 
-          <p
-            className="
-          mx-auto
-          mt-5
-          max-w-3xl
-          text-gray-600
-          leading-8
-          sm:text-lg
-          "
-          >
-            Our structured training programs prepare security personnel with
-            essential skills, operational knowledge and confidence required for
-            professional security services.
-          </p>
+          <div className="mx-auto mt-5 h-1 w-12 rounded-full bg-[#d83b32]" />
         </motion.div>
 
-        {/* INTRO CARD */}
+        {/* =====================================================
+            BOTTOM FEATURE CARD
+        ====================================================== */}
 
         <motion.div
           initial={{
@@ -204,247 +349,37 @@ export default function Trainings() {
           viewport={{
             once: true,
           }}
-          className="
-        mt-14
-        rounded-3xl
-        bg-[#192235]
-        p-8
-        text-white
-        shadow-xl
-        "
+          transition={{
+            duration: 0.7,
+          }}
+          className="relative mt-8 overflow-hidden rounded-3xl border border-blue-200/10 bg-[#081b35] px-7 py-9 text-center shadow-[0_20px_60px_rgba(0,0,0,0.25)] sm:px-12"
         >
-          <div
-            className="
-          flex
-          flex-col
-          items-center
-          gap-5
-          text-center
-          sm:flex-row
-          sm:text-left
-          "
-          >
-            <div
-              className="
-            flex
-            h-16
-            w-16
-            items-center
-            justify-center
-            rounded-2xl
-            bg-[#d83b32]
-            "
-            >
-              <GraduationCap size={32} />
+          {/* Blue Glow */}
+
+          <div className="pointer-events-none absolute left-1/2 top-0 h-32 w-[500px] -translate-x-1/2 rounded-full bg-[#0d5bd7]/10 blur-[90px]" />
+
+          <div className="relative">
+            {/* Icon */}
+
+            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-[#d83b32] text-white shadow-[0_8px_25px_rgba(216,59,50,0.2)]">
+              <Building2 size={23} />
             </div>
 
-            <div>
-              <h2
-                className="
-              text-2xl
-              font-bold
-              "
-              >
-                Training For Every Stage
-              </h2>
+            {/* Heading */}
 
-              <p
-                className="
-              mt-2
-              leading-7
-              text-gray-300
-              "
-              >
-                From basic induction to refresher and customised training, we
-                continuously develop security professionals according to
-                operational requirements.
-              </p>
-            </div>
+            <h3 className="mt-4 text-xl font-extrabold text-white sm:text-2xl">
+              One Partner.{" "}
+              <span className="text-[#ef6359]">Multiple Solutions.</span>
+            </h3>
+
+            {/* Description */}
+
+            <p className="mx-auto mt-2 max-w-2xl text-sm leading-7 text-blue-100/50">
+              Comprehensive services designed to support your security,
+              operational and management requirements.
+            </p>
           </div>
         </motion.div>
-
-        {/* TRAINING CARDS */}
-
-        <div
-          className="
-        mt-16
-        space-y-8
-        "
-        >
-          {trainingPrograms.map((item, index) => (
-            <motion.div
-              key={item.title}
-              initial={{
-                opacity: 0,
-                x: index % 2 === 0 ? -50 : 50,
-              }}
-              whileInView={{
-                opacity: 1,
-                x: 0,
-              }}
-              viewport={{
-                once: true,
-              }}
-              transition={{
-                duration: 0.6,
-              }}
-              className="
-          overflow-hidden
-          rounded-3xl
-          border
-          border-gray-200
-          bg-white
-          shadow-sm
-          hover:shadow-xl
-          transition
-          "
-            >
-              <div
-                className="
-          grid
-          lg:grid-cols-[220px_1fr_320px]
-          "
-              >
-                {/* NUMBER */}
-
-                <div
-                  className="
-            relative
-            flex
-            flex-col
-            justify-center
-            bg-[#192235]
-            p-7
-            text-white
-            "
-                >
-                  <span
-                    className="
-              absolute
-              right-3
-              top-0
-              text-8xl
-              font-black
-              text-white/5
-              "
-                  >
-                    {item.number}
-                  </span>
-
-                  <div
-                    className="
-              relative
-              "
-                  >
-                    <div
-                      className="
-              flex
-              h-12
-              w-12
-              items-center
-              justify-center
-              rounded-xl
-              bg-[#d83b32]
-              "
-                    >
-                      {item.icon}
-                    </div>
-
-                    <p
-                      className="
-              mt-5
-              text-xs
-              uppercase
-              tracking-widest
-              text-[#ef6359]
-              "
-                    >
-                      {item.shortText}
-                    </p>
-
-                    <h2
-                      className="
-              mt-2
-              text-2xl
-              font-bold
-              "
-                    >
-                      {item.title}
-                    </h2>
-                  </div>
-                </div>
-
-                {/* CONTENT */}
-
-                <div
-                  className="
-            flex
-            flex-col
-            justify-center
-            p-7
-            "
-                >
-                  <h3
-                    className="
-              text-2xl
-              font-bold
-              text-[#24272d]
-              "
-                  >
-                    {item.title} Training
-                  </h3>
-
-                  <p
-                    className="
-              mt-4
-              leading-7
-              text-gray-600
-              "
-                  >
-                    {item.description}
-                  </p>
-
-                  <div
-                    className="
-              mt-5
-              flex
-              items-center
-              gap-2
-              text-sm
-              font-bold
-              text-[#d83b32]
-              "
-                  >
-                    Professional Training
-                    <ArrowRight size={17} />
-                  </div>
-                </div>
-
-                {/* IMAGE */}
-
-                <div
-                  className="
-            h-[260px]
-            overflow-hidden
-            "
-                >
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="
-              h-full
-              w-full
-              object-cover
-              transition
-              duration-700
-              hover:scale-110
-              "
-                  />
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );

@@ -20,13 +20,16 @@ const stats = [
   },
 ];
 
+// Counter Animation Starts From 0
 function Counter({ value }) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
     let start = 0;
-    const duration = 1800;
+
+    const duration = 2000;
     const stepTime = 20;
+
     const increment = value / (duration / stepTime);
 
     const timer = setInterval(() => {
@@ -34,6 +37,7 @@ function Counter({ value }) {
 
       if (start >= value) {
         setCount(value);
+
         clearInterval(timer);
       } else {
         setCount(Math.floor(start));
@@ -48,91 +52,234 @@ function Counter({ value }) {
 
 export default function StatsSection() {
   return (
-    <section className="bg-white px-5 py-10 sm:py-12">
-      <div className="mx-auto max-w-7xl overflow-hidden rounded-2xl bg-[#d83b32] shadow-xl">
-        <div className="grid grid-cols-2 md:grid-cols-4">
+    <section
+      className="
+    relative
+    overflow-hidden
+    bg-[#081426]
+    px-5
+    py-14
+    sm:px-8
+    sm:py-16
+    lg:px-12
+    "
+    >
+      {/* Background Glow */}
+
+      <div
+        className="
+      absolute
+      -left-40
+      top-0
+      h-96
+      w-96
+      rounded-full
+      bg-blue-500/10
+      blur-3xl
+      "
+      />
+
+      <div
+        className="
+      absolute
+      -right-40
+      bottom-0
+      h-96
+      w-96
+      rounded-full
+      bg-red-500/10
+      blur-3xl
+      "
+      />
+
+      <div
+        className="
+      relative
+      mx-auto
+      max-w-7xl
+      overflow-hidden
+      rounded-3xl
+      border
+      border-white/10
+      bg-[#102238]
+      shadow-2xl
+      "
+      >
+        <div
+          className="
+        grid
+        grid-cols-2
+        md:grid-cols-4
+        "
+        >
           {stats.map((item, index) => (
             <motion.div
               key={item.label}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              initial={{
+                opacity: 0,
+                y: 40,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+                amount: 0.3,
+              }}
               transition={{
                 duration: 0.6,
-                delay: index * 0.12,
+                delay: index * 0.15,
               }}
               whileHover={{
-                y: -5,
-                scale: 1.03,
+                y: -8,
+                scale: 1.04,
               }}
               className={`
-                relative flex min-h-[145px] flex-col
-                items-center justify-center
-                px-4 py-7 text-center
-                transition-all duration-300
-                ${index < 2 ? "border-b border-white/25" : ""}
-                ${index % 2 === 0 ? "border-r border-white/25" : ""}
-                md:min-h-[170px]
-                md:border-b-0
-                ${
-                  index !== stats.length - 1
-                    ? "md:border-r md:border-white/30"
-                    : ""
-                }
-              `}
+          relative
+          flex
+          min-h-[160px]
+          flex-col
+          items-center
+          justify-center
+          px-4
+          py-8
+          text-center
+          transition-all
+          
+          border-white/10
+
+          ${index < 2 ? "border-b md:border-b-0" : ""}
+
+          ${index % 2 === 0 ? "border-r" : ""}
+
+          md:border-r
+
+          ${index === stats.length - 1 ? "md:border-r-0" : ""}
+          `}
             >
+              {/* Icon Glow Circle */}
+
+              <div
+                className="
+            absolute
+            inset-0
+            bg-gradient-to-br
+            from-white/5
+            to-transparent
+            opacity-0
+            transition
+            duration-500
+            hover:opacity-100
+            "
+              />
+
               {/* Number */}
+
               <motion.div
-                initial={{ scale: 0.7, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.12 + 0.15,
+                initial={{
+                  scale: 0.5,
+                  opacity: 0,
                 }}
-                className="flex items-baseline justify-center"
+                whileInView={{
+                  scale: 1,
+                  opacity: 1,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.15,
+                }}
+                className="
+            relative
+            flex
+            items-baseline
+            justify-center
+            "
               >
-                <span className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+                <span
+                  className="
+              text-4xl
+              font-black
+              tracking-tight
+              text-white
+              sm:text-5xl
+              lg:text-6xl
+              "
+                >
                   <Counter value={item.number} />
                 </span>
 
-                {item.number >= 1000 && (
-                  <span className="ml-1 text-3xl font-bold text-white sm:text-4xl">
-                    +
-                  </span>
-                )}
-
-                {item.number === 25 && (
-                  <span className="ml-1 text-xl font-semibold text-white/90">
-                    +
-                  </span>
-                )}
+                <span
+                  className="
+              ml-1
+              text-3xl
+              font-bold
+              text-[#d83b32]
+              sm:text-4xl
+              "
+                >
+                  +
+                </span>
               </motion.div>
 
               {/* Label */}
+
               <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
+                initial={{
+                  opacity: 0,
+                  y: 10,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                }}
+                viewport={{
+                  once: true,
+                }}
                 transition={{
                   duration: 0.5,
-                  delay: index * 0.12 + 0.3,
+                  delay: index * 0.15 + 0.2,
                 }}
-                className="mt-2 max-w-[180px] text-sm font-medium leading-5 text-white/95 sm:text-base"
+                className="
+            relative
+            mt-3
+            max-w-[180px]
+            text-sm
+            font-semibold
+            leading-6
+            text-gray-300
+            sm:text-base
+            "
               >
                 {item.label}
               </motion.p>
 
-              {/* Small decorative line */}
+              {/* Bottom Line */}
+
               <motion.span
-                initial={{ width: 0 }}
-                whileInView={{ width: 35 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.5,
-                  delay: index * 0.12 + 0.4,
+                initial={{
+                  width: 0,
                 }}
-                className="mt-3 h-[2px] rounded-full bg-white/70"
+                whileInView={{
+                  width: 45,
+                }}
+                viewport={{
+                  once: true,
+                }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.15 + 0.3,
+                }}
+                className="
+            relative
+            mt-4
+            h-[3px]
+            rounded-full
+            bg-[#d83b32]
+            "
               />
             </motion.div>
           ))}
