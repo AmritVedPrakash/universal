@@ -360,7 +360,8 @@ export default function ManagementTeam() {
   className="
     relative
     flex
-    h-[390px]
+    h-[430px]
+    w-full
     items-end
     justify-center
     overflow-hidden
@@ -377,17 +378,17 @@ export default function ManagementTeam() {
       relative
       z-10
       h-full
-      w-full
+      w-[115%]
+      max-w-none
       object-contain
       object-bottom
-      p-2
       transition-transform
       duration-700
-      group-hover:scale-[1.03]
+      group-hover:scale-[1.04]
     "
   />
 
-  {/* Bottom gradient */}
+  {/* Bottom Gradient */}
 
   <div
     className="
@@ -404,7 +405,7 @@ export default function ManagementTeam() {
     "
   />
 
-  {/* Top subtle overlay */}
+  {/* Top Soft Overlay */}
 
   <div
     className="
@@ -419,7 +420,7 @@ export default function ManagementTeam() {
     "
   />
 
-  {/* Number */}
+  {/* Card Number */}
 
   <div
     className="
