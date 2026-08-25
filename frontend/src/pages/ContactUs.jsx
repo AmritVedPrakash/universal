@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import {
   Mail,
@@ -10,12 +11,52 @@ import {
 } from "lucide-react";
 
 export default function ContactUs() {
+  const form = useRef();
+
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setSubmitted(true);
-    event.target.reset();
+
+    setLoading(true);
+    setSubmitted(false);
+
+    const formData = new FormData(form.current);
+
+    const templateParams = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      organization: formData.get("organization"),
+      location: formData.get("location"),
+      message: formData.get("message"),
+    };
+
+    console.log("Sending data:", templateParams);
+
+    emailjs
+      .send(
+        "service_ncvrtta",
+        "template_qdthfb9",
+        templateParams,
+        "EJQhlVM7Y27CVKgHC",
+      )
+      .then(
+        () => {
+          console.log("Email sent successfully");
+
+          setSubmitted(true);
+          setLoading(false);
+
+          form.current.reset();
+        },
+        (error) => {
+          console.error("Email Error:", error);
+
+          setLoading(false);
+        },
+      );
   };
 
   return (
@@ -249,12 +290,7 @@ export default function ContactUs() {
               <ContactInfo
                 icon={<Phone size={27} />}
                 title="Phone"
-                value={
-                  <>
-                    
-                    +91 7042849777
-                  </>
-                }
+                value={<>+91 7042849777</>}
                 href="tel:+917042849777"
               />
 
@@ -391,7 +427,11 @@ export default function ContactUs() {
                   FORM
               ================================================== */}
 
-              <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+              <form
+                ref={form}
+                onSubmit={handleSubmit}
+                className="mt-8 space-y-5"
+              >
                 <FormField
                   label="Your Name"
                   name="name"
@@ -446,6 +486,7 @@ export default function ContactUs() {
                   </label>
 
                   <textarea
+                    name="message"
                     rows="5"
                     placeholder="Tell us about your security requirements"
                     required
@@ -474,6 +515,7 @@ export default function ContactUs() {
 
                 <button
                   type="submit"
+                  disabled={loading}
                   className="
                     group
                     flex
@@ -492,13 +534,18 @@ export default function ContactUs() {
                     hover:-translate-y-1
                     hover:bg-[#bd3029]
                     hover:shadow-[0_15px_35px_rgba(216,59,50,0.28)]
+                    disabled:cursor-not-allowed
+                    disabled:opacity-50
                   "
                 >
-                  Send Enquiry
-                  <Send
-                    size={18}
-                    className="transition-transform duration-300 group-hover:translate-x-1"
-                  />
+                  {loading ? "Sending..." : "Send Enquiry"}
+
+                  {!loading && (
+                    <Send
+                      size={18}
+                      className="transition-transform duration-300 group-hover:translate-x-1"
+                    />
+                  )}
                 </button>
               </form>
             </div>
