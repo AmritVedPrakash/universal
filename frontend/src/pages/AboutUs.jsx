@@ -19,11 +19,11 @@ export default function AboutUs() {
       icon: <Award size={28} />,
       number: "16+",
       title: "Years of Experience",
-      text: "Our Founder Chairman, Mr. Sudhir Singh, brings over 25 years of experience in security and allied services.",
+      text: "Our Founder Chairman, Mrs. Saroj Singh, brings over 25 years of experience in security and allied services.",
     },
     {
       icon: <Users size={28} />,
-      number: "2500+",
+      number: "1500+",
       title: "Security Personnel",
       text: "A strong workforce of over 2500 Security and FMS personnel.",
     },
@@ -146,7 +146,7 @@ export default function AboutUs() {
             <div className="mt-6 space-y-5 text-[17px] leading-8 text-blue-100/65">
               <p>
                 A vision of our Founder Chairman,
-                <strong className="text-white"> Mr. Sudhir Singh</strong>, who
+                <strong className="text-white"> Mrs. Saroj Singh</strong>, who
                 has additional expertise in Manned Guarding, FMS & Allied
                 Services.
               </p>
