@@ -261,7 +261,7 @@ export default function ContactUs() {
               <ContactInfo
                 icon={<MessageCircle size={27} />}
                 title="WhatsApp"
-                value="+91 9560662367"
+                value="+91 7042849777"
                 href="https://wa.me/7042849777"
               />
 

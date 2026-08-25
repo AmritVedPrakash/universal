@@ -66,7 +66,7 @@ export default function AboutSecurity() {
         "
         >
           <p>
-            Red Scorpion Security Solutions is a top-tier, certified, and
+            Red Universal Securityy Solutions is a top-tier, certified, and
             authorized security agency providing professional security services
             in Delhi NCR. We have a team of skilled security guards, armed and
             unarmed private bodyguards who deliver reliable protection solutions
@@ -213,11 +213,11 @@ export default function AboutSecurity() {
         "
         >
           <h3 className="text-3xl font-bold mb-4">
-            Why Choose Red Scorpion Security Solutions?
+            Why Choose Red Universal Securityy Solutions?
           </h3>
 
           <p className="text-lg leading-8">
-            Red Scorpion Security Solutions is a certified and professional
+            Red Universal Securityy Solutions is a certified and professional
             security agency delivering exceptional security services at
             competitive prices. Our trained workforce is committed towards
             client satisfaction and never compromises with quality or safety

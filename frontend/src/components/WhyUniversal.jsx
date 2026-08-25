@@ -20,7 +20,7 @@ export default function WhyUniversal() {
   const highlights = [
     {
       icon: <MapPinned size={24} />,
-      value: "16",
+      value: "6",
       label: "States / Union Territories",
     },
     {

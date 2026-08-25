@@ -6,32 +6,32 @@ const testimonials = [
   {
     name: "KRRISH",
     subtitle: "Luxury Lifestyle",
-    text: "Our company has been doing business with Red Scorpion Security for many consecutive years. They are the best service provider in its kind. They are extremely accommodating and excel in performance.",
+    text: "Our company has been doing business with Red Universal Security for many consecutive years. They are the best service provider in its kind. They are extremely accommodating and excel in performance.",
   },
   {
     name: "Magic Auto",
     subtitle: "Sector 13, Noida",
-    text: "Thank you Red Scorpion Security for ensuring safety and security round the clock. Your professionalism exceeded our expectation and we look forward with you.",
+    text: "Thank you Red Universal Security for ensuring safety and security round the clock. Your professionalism exceeded our expectation and we look forward with you.",
   },
   {
     name: "Blackberrys",
     subtitle: "Corporate Client",
-    text: "We are glad to have discovered Red Scorpion Security. The kind of services they deliver meet our expectations. They deal with all kind of professional help required by a company for growth.",
+    text: "We are glad to have discovered Red Universal Security. The kind of services they deliver meet our expectations. They deal with all kind of professional help required by a company for growth.",
   },
   {
     name: "Adepta Software",
     subtitle: "Sector 63, Noida",
-    text: "We are pleased by the Security services provided by Red Scorpion Security. The staff is very much professional and well trained.",
+    text: "We are pleased by the Security services provided by Red Universal Security. The staff is very much professional and well trained.",
   },
   {
     name: "NHDC",
     subtitle: "Govt. Organization",
-    text: "We highly recommend Red Scorpion Security for the top notch services. The services are outstanding and security guards are highly trained and are observant.",
+    text: "We highly recommend Red Universal Security for the top notch services. The services are outstanding and security guards are highly trained and are observant.",
   },
   {
     name: "JCB",
     subtitle: "Sector 2, Noida",
-    text: "After hiring security personnel from Red Scorpion Security, I must say that they follow professional ethics very much organised and make sure things go smoothly.",
+    text: "After hiring security personnel from Red Universal Security, I must say that they follow professional ethics very much organised and make sure things go smoothly.",
   },
 ];
 

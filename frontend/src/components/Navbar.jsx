@@ -42,7 +42,7 @@ export default function Navbar() {
             <Link to="/" onClick={closeMenu}>
               <img
                 src={logo}
-                alt="Red Scorpion Security Solutions"
+                alt="Red Universal Securityy Solutions"
                 className="
                   w-[140px]
                   object-contain

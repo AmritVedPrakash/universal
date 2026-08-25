@@ -416,7 +416,7 @@ export default function AboutUs() {
           className="relative"
         >
           <p className="text-2xl font-extrabold sm:text-3xl">
-            We deliver what <span className="text-[#ef6359]">YOU DREAM!</span>
+            We Delever <span className="text-[#ef6359]">YOU DREAM!</span>
           </p>
 
           <p className="mt-2 text-sm font-medium text-blue-100/60">

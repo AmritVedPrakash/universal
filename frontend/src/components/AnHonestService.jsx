@@ -129,9 +129,9 @@ export default function AnHonestService() {
           mb-6
           "
           >
-            All round the clock, 365 days of the year - Red Scorpion Security
+            All round the clock, 365 days of the year - Red Universal Securityy
             boasts of commitment to grant our customer's an honest service. Red
-            Scorpion Security Solutions comprises of extreme dedication driven
+            Universal Securityy Solutions comprises of extreme dedication driven
             team of security professionals and well trained guards.
           </p>
 
@@ -144,7 +144,7 @@ export default function AnHonestService() {
           "
           >
             With the worldwide attention being drawn to the current business
-            scenario, Red Scorpion Security has enclosed an awfully
+            scenario, Red Universal Securityy has enclosed an awfully
             comprehensive package that covers all clients' desires within the
             field security.
           </p>
