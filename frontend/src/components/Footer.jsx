@@ -339,6 +339,43 @@ function Footer() {
                 sudhir@universalprotection.in
               </a>
               </div>
+              
+              <div>
+              <a
+                href="mailto:universalprotection786@gmail.com"
+                className="
+                  break-all
+                  transition
+                  hover:text-[#ef6359]
+                "
+              >
+                Query@universalprotection.in
+              </a>
+              </div>
+              <div>
+              <a
+                href="mailto:universalprotection786@gmail.com"
+                className="
+                  break-all
+                  transition
+                  hover:text-[#ef6359]
+                "
+              >
+                Operations@universalprotection.in
+              </a>
+              </div>
+              <div>
+              <a
+                href="mailto:universalprotection786@gmail.com"
+                className="
+                  break-all
+                  transition
+                  hover:text-[#ef6359]
+                "
+              >
+                Salesteam@universalprotection.in
+              </a>
+              </div>
 
             </div>
 
